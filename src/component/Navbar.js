@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/system";
+
 import {
   AppBar,
   Box,
@@ -12,14 +12,13 @@ import {
   Tooltip,
   MenuItem,
   IconButton,
-  ListItemIcon,
 } from "@mui/material";
 // ----------------------
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import SettingsIcon from "@mui/icons-material/Settings";
+
 import { NavLink } from "react-router-dom";
 const pages = [
   { link: "home", icon: <HomeIcon /> },
@@ -31,7 +30,7 @@ const pages = [
   { link: "support" },
   { link: "team" },
 ];
-const icons = ["HomeIcon", "AccountCircleIcon", "SettingsIcon"];
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {

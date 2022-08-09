@@ -1,7 +1,5 @@
 import * as React from "react";
-import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Typography, Card, CardHeader } from "@mui/material";
 import { Avatar } from "@mui/material";

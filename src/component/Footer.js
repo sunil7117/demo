@@ -5,7 +5,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Typography, Card, CardHeader } from "@mui/material";
 import { Avatar } from "@mui/material";
-import { purple } from "@mui/material/colors";
 import {
   FaStackOverflow,
   FaFacebook,
@@ -16,14 +15,6 @@ import {
 import { FiPhoneCall } from "react-icons/fi";
 import { ImLocation2 } from "react-icons/im";
 import { FiMail } from "react-icons/fi";
-import logo from "../images/logo.png";
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
 export default function Footer() {
   return (

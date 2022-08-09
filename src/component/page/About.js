@@ -1,13 +1,6 @@
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { Paper, Button, Typography, Box, Grid } from "@mui/material";
 import About1 from "../../images/about1.png";
 import { FaChevronRight } from "react-icons/fa";
-const styles = {
-  paperContainer: {
-    backgroundImage: `url(${Image})`,
-  },
-};
-
 const About = () => {
   return (
     <>

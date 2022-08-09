@@ -1,26 +1,33 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./component/page/Layout";
+import Home from "./component/page/Home";
+import About from "./component/page/About";
+import Service from "./component/page/service";
+import Earning from "./component/page/Earning";
+import Project from "./component/page/Project";
+import Account from "./component/page/Account";
+import Support from "./component/page/Support";
+import Team from "./component/page/Team";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React yo deplyee new by sunil
-        </a>
-        <p>sunil</p>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="service" element={<Service />} />
+            <Route path="earning" element={<Earning />} />
+            <Route path="project" element={<Project />} />
+            <Route path="account" element={<Account />} />
+            <Route path="support" element={<Support />} />
+            <Route path="team" element={<Team />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
-
+};
 export default App;

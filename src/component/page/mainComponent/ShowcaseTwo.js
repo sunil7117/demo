@@ -1,25 +1,29 @@
-import { Paper, Button, Typography, Box, Grid } from "@mui/material";
+import { Button, Typography, Box, Grid } from "@mui/material";
 
 const ShowcaseTwo = (props) => {
-  console.log(props.pic);
+  console.log(props.value.pic);
   return (
     <>
-      <Paper
+      <Box
+        component="div"
         sx={{
-          backgroundImage: `url(${props.pic})`,
-          backgroundSize: "100vw",
+          backgroundImage: `url(${props.value.pic})`,
+          backgroundSize: "100%",
+          height: "90vh",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "top center",
-          minHeight: 300,
-          pb: 1,
         }}
       >
-        <Grid container>
-          <Grid item xs={12} md={5}></Grid>
-          <Grid item xs={12} md={7}>
+        <Grid
+          container
+          alignItems="center"
+          sx={{
+            height: { sx: "50%", sm: "75%", md: "100%" },
+          }}
+        >
+          <Grid item xs={12} md={5} sx={{}}>
             <Box sx={{ px: { xs: 3, sm: 8 }, py: {} }}>
               <Typography component="div" variant="h3" sx={{}}>
-                {props.title}
+                {props.value.title}
               </Typography>
               <Grid container>
                 <Grid item xs={6} md={12}>
@@ -37,28 +41,29 @@ const ShowcaseTwo = (props) => {
                         fontSize: 20,
                       }}
                     >
-                      {props.content}
+                      {props.value.content}
                     </Typography>
                   </Box>
                 </Grid>
                 <Grid item xs={6}></Grid>
               </Grid>
-              <Grid container sx={{ pt: 3 }}>
-                <Grid item md={6}>
+              <Grid container sx={{ pt: 1 }} spacing={0.5}>
+                <Grid item xs={12} md={6}>
                   <Button variant="contained" size="small">
-                    {props.btn1}
+                    {props.value.btn1}
                   </Button>
                 </Grid>
-                <Grid item md={6}>
+                <Grid item xs={12} md={6}>
                   <Button variant="contained" size="small">
-                    {props.btn2}
+                    {props.value.btn2}
                   </Button>
                 </Grid>
               </Grid>
             </Box>
           </Grid>
+          <Grid item xs={12} md={7} sx={{}}></Grid>
         </Grid>
-      </Paper>
+      </Box>
     </>
   );
 };

@@ -1,7 +1,63 @@
-const Earning = () => {
+import { Button, Typography, Box, Grid } from "@mui/material";
+import about1 from "../../images/about1.png";
+const Earning = (props) => {
+  console.log(props.pic);
   return (
     <>
-      <h1>Earning page</h1>
+      <Box
+        component="div"
+        sx={{
+          backgroundImage: `url(${about1})`,
+          backgroundSize: "100%",
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Grid container>
+          <Grid item xs={12} md={5} sx={{ backgroundColor: "blue" }}></Grid>
+          <Grid item xs={12} md={7} sx={{ backgroundColor: "" }}>
+            <Box sx={{ px: { xs: 3, sm: 8 }, py: {} }}>
+              <Typography component="div" variant="h3" sx={{}}>
+                {props.title}
+              </Typography>
+              <Grid container>
+                <Grid item xs={6} md={12}>
+                  <Box
+                    sx={{
+                      width: { xs: 200, sm: 400, md: 600 },
+                    }}
+                  >
+                    <Typography
+                      component="div"
+                      variant="p"
+                      sx={{
+                        overflow: "hidden",
+                        height: 85,
+                        fontSize: 20,
+                      }}
+                    >
+                      {props.content}
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={6}></Grid>
+              </Grid>
+              <Grid container sx={{ pt: 3 }}>
+                <Grid item md={6}>
+                  <Button variant="contained" size="small">
+                    {props.btn1}
+                  </Button>
+                </Grid>
+                <Grid item md={6}>
+                  <Button variant="contained" size="small">
+                    {props.btn2}
+                  </Button>
+                </Grid>
+              </Grid>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 };

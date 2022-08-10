@@ -6,19 +6,19 @@ import img from "../../images/img.png";
 const Home = () => {
   const showcase1 = {
     pic: About1,
-    title: "component1",
+    title: "Hello, Learn Earn and Grow",
     content:
       "Websites, Applications, Ui/Ux designs, Logos, Banners,College Projects etc. at Affordable Prices.",
-    btn1: "Start Earning",
-    btn2: "Give Work",
+    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
   };
   const showcase2 = {
     pic: img,
-    title: "component2",
+    title: "Get Work",
     content:
       "Websites, Applications, Ui/Ux designs, Logos, Banners,College Projects etc. at Affordable Prices.",
-    btn1: "Start Earning",
-    btn2: "Give Work",
+    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
   };
   return (
     <>

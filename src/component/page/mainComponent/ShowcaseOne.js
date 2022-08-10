@@ -8,9 +8,10 @@ const ShowcaseOne = (props) => {
         component="div"
         sx={{
           backgroundImage: `url(${props.value.pic})`,
-          backgroundSize: "100%",
-          height: "90vh",
+          backgroundSize: "100% ",
           backgroundRepeat: "no-repeat",
+          mb: 2,
+          height: { xs: 250, sm: 400, md: 550 },
         }}
       >
         <Grid
@@ -21,8 +22,12 @@ const ShowcaseOne = (props) => {
           }}
         >
           <Grid item xs={12} md={5} sx={{}}>
-            <Box sx={{ px: { xs: 3, sm: 8 }, py: {} }}>
-              <Typography component="div" variant="h3" sx={{}}>
+            <Box sx={{ pl: { xs: 3, sm: 8 }, py: {} }}>
+              <Typography
+                component="div"
+                variant="h1"
+                sx={{ fontSize: { xs: 32, sm: 42, md: 52 } }}
+              >
                 {props.value.title}
               </Typography>
               <Grid container>
@@ -30,15 +35,17 @@ const ShowcaseOne = (props) => {
                   <Box
                     sx={{
                       width: { xs: 200, sm: 400, md: 600 },
+                      // backgroundColor: "green",
                     }}
                   >
                     <Typography
                       component="div"
                       variant="p"
                       sx={{
-                        overflow: "hidden",
-                        height: 85,
-                        fontSize: 20,
+                        overflow: { xs: "hidden", sm: "hidden", md: "visible" },
+                        height: { xs: 85, sm: 100 },
+                        fontSize: { xs: 18, sm: 20 },
+                        border: "5px solid red",
                       }}
                     >
                       {props.value.content}
@@ -49,13 +56,23 @@ const ShowcaseOne = (props) => {
               </Grid>
               <Grid container sx={{ pt: 1 }} spacing={0.5}>
                 <Grid item xs={12} md={6}>
-                  <Button variant="contained" size="small">
-                    {props.value.btn1}
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color={props.value.btn1.btnColor}
+                    sx={{ fontSize: { xs: 12, sm: 14 } }}
+                  >
+                    {props.value.btn1.btnName}
                   </Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Button variant="contained" size="small">
-                    {props.value.btn2}
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    color={props.value.btn2.btnColor}
+                    sx={{ fontSize: { xs: 12, sm: 14 } }}
+                  >
+                    {props.value.btn2.btnName}
                   </Button>
                 </Grid>
               </Grid>

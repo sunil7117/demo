@@ -3,22 +3,26 @@ import ShowcaseTwo from "./mainComponent/ShowcaseTwo";
 import About1 from "../../images/about1.png";
 import About2 from "../../images/about2.png";
 const About = () => {
+  const showcase1 = {
+    pic: About1,
+    title: "CodingSick",
+    content:
+      "provding the best costumer service. This is the plateform where you can develop your dream projects. we are here to do your work.",
+    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
+  };
+  const showcase2 = {
+    pic: About2,
+    title: "Our project",
+    content:
+      "provding the best costumer service. This is the plateform where you can develop your dream projects. we are here to do your work.",
+    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
+  };
   return (
     <>
-      <ShowcaseOne
-        pic={About1}
-        title="sunil"
-        content="Websites, Applications, Ui/Ux designs, Logos, Banners,College Projects etc. at Affordable Prices."
-        btn1="Start Earning"
-        btn2="Give Work"
-      />
-      <ShowcaseTwo
-        pic={About2}
-        title="sunil"
-        content="Websites, Applications, Ui/Ux designs, Logos, Banners,College Projects etc. at Affordable Prices."
-        btn1="Start Earning"
-        btn2="Give Work"
-      />
+      <ShowcaseOne value={showcase1} />
+      <ShowcaseTwo value={showcase2} />
     </>
   );
 };

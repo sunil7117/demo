@@ -8,7 +8,8 @@ const ShowcaseOne = (props) => {
         component="div"
         sx={{
           backgroundImage: `url(${props.value.pic})`,
-          backgroundSize: "100% ",
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
           mb: 2,
           height: { xs: 250, sm: 400, md: 550 },

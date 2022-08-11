@@ -1,7 +1,7 @@
 import { Button, Typography, Box, Grid } from "@mui/material";
 
 const ShowcaseTwo = (props) => {
-  console.log(props.value.pic);
+  // console.log(props.value.pic);
   return (
     <>
       <Box
@@ -20,10 +20,10 @@ const ShowcaseTwo = (props) => {
             height: { sx: "50%", sm: "75%", md: "100%" },
           }}
         >
-          <Grid item xs={12} md={7} sx={{ backgroundColor: "red" }}>
+          <Grid item xs={6} sx={{ backgroundColor: "red" }}>
             1
           </Grid>
-          <Grid item xs={12} md={5} sx={{}}>
+          <Grid item xs={6} sx={{}}>
             <Box sx={{}}>
               <Typography
                 component="div"

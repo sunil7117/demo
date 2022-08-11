@@ -1,7 +1,7 @@
 import { Button, Typography, Box, Grid } from "@mui/material";
 
 const ShowcaseOne = (props) => {
-  console.log(props.value.pic);
+  // console.log(props.value.pic);
   return (
     <>
       <Box
@@ -21,12 +21,12 @@ const ShowcaseOne = (props) => {
             height: { sx: "50%", sm: "75%", md: "100%" },
           }}
         >
-          <Grid item xs={12} md={5} sx={{}}>
+          <Grid item xs={6} sx={{}}>
             <Box sx={{ pl: { xs: 3, sm: 8 }, py: {} }}>
               <Typography
                 component="div"
                 variant="h1"
-                sx={{ fontSize: { xs: 32, sm: 42, md: 52 } }}
+                sx={{ fontSize: { xs: 25, sm: 32, md: 42 } }}
               >
                 {props.value.title}
               </Typography>
@@ -42,10 +42,9 @@ const ShowcaseOne = (props) => {
                       component="div"
                       variant="p"
                       sx={{
-                        overflow: { xs: "hidden", sm: "hidden", md: "visible" },
+                        // overflow: { xs: "hidden", sm: "hidden", md: "visible" },
                         height: { xs: 85, sm: 100 },
                         fontSize: { xs: 18, sm: 20 },
-                        border: "5px solid red",
                       }}
                     >
                       {props.value.content}
@@ -60,7 +59,7 @@ const ShowcaseOne = (props) => {
                     variant="contained"
                     size="small"
                     color={props.value.btn1.btnColor}
-                    sx={{ fontSize: { xs: 12, sm: 14 } }}
+                    sx={{ fontSize: { xs: 11, sm: 14, md: 16 } }}
                   >
                     {props.value.btn1.btnName}
                   </Button>
@@ -78,7 +77,7 @@ const ShowcaseOne = (props) => {
               </Grid>
             </Box>
           </Grid>
-          <Grid item xs={12} md={7} sx={{}}></Grid>
+          <Grid item xs={6} sx={{}}></Grid>
         </Grid>
       </Box>
     </>

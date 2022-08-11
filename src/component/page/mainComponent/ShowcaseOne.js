@@ -27,7 +27,7 @@ const ShowcaseOne = (props) => {
               <Typography
                 component="div"
                 variant="h1"
-                sx={{ fontSize: { xs: 25, sm: 32, md: 42 } }}
+                sx={{ fontSize: { xs: 25, sm: 32, md: 42 }, fontWeight: 600 }}
               >
                 {props.value.title}
               </Typography>

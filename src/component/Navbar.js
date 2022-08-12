@@ -45,14 +45,14 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: "#64B9B9" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             component="img"
             alt="logo"
             src={logo}
-            sx={{ width: 200, display: { xs: "none", md: "flex" }, mr: 1 }}
+            sx={{ width: 190, display: { xs: "none", md: "flex" }, mr: 1 }}
           />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -89,6 +89,10 @@ const Navbar = () => {
                     textAlign="center"
                     component={NavLink}
                     to={page.link}
+                    sx={{
+                      textTransform: "uppercase",
+                      textDecoration: "none",
+                    }}
                   >
                     {page.link}
                   </Typography>
@@ -96,32 +100,33 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Typography
-            component="img"
-            alt="logo"
-            src={logo}
-            sx={{
-              width: 100,
-              display: { display: { xs: "flex", md: "none" }, mr: "auto" },
-            }}
-          />
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page, i) => (
-              <Button
-                key={i}
-                component={NavLink}
-                to={page.link}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                  textTransform: "none",
-                }}
-              >
-                {page.link}
-              </Button>
-            ))}
+          <Box sx={{ backgroudColor: "green", flexGrow: 1 }}>
+            <Typography
+              component="img"
+              alt="logo"
+              src={logo}
+              sx={{
+                display: { xs: "flex", md: "none" },
+                width: 150,
+              }}
+            />
+          </Box>
+          <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+              {pages.map((page, i) => (
+                <Button
+                  key={i}
+                  component={NavLink}
+                  to={page.link}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    color: "white",
+                  }}
+                >
+                  {page.link}
+                </Button>
+              ))}
+            </Box>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <SigninSignup />

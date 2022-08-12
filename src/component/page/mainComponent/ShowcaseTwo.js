@@ -38,14 +38,15 @@ const ShowcaseTwo = (props) => {
                   <Box
                     sx={{
                       width: { xs: 200, sm: 300, md: 600 },
+                      pb: 1,
                     }}
                   >
                     <Typography
                       component="div"
                       variant="p"
                       sx={{
-                        // overflow: { xs: "hidden", sm: "hidden", md: "visible" },
-                        height: { xs: 85, sm: 100 },
+                        overflow: { xs: "hidden", sm: "hidden", md: "visible" },
+                        height: { xs: 95, sm: 100 },
                         fontSize: { xs: 18, sm: 20 },
                       }}
                     >

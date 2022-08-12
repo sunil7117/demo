@@ -1,8 +1,13 @@
+import { Box, Grid } from "@mui/material";
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import service from "../../images/serviceindex.png";
 import ServiceBox from "./serviceComponent/ServiceBox";
 // images
 import andriod1 from "../../images/and1.png";
+import ux from "../../images/uiux.png";
+import web from "../../images/web.png";
+import wordpress from "../../images/wordpress.png";
+import error from "../../images/error.png";
 const Service = () => {
   const showcase1 = {
     pic: service,
@@ -20,18 +25,57 @@ const Service = () => {
       content:
         "We can create any kind of application according to your requirement.",
     },
+    {
+      pic: ux,
+      title1: "UI/UX",
+      title2: " Designing",
+      content:
+        "We are here to Design your UI/UX for your Website or Application.",
+    },
+    {
+      pic: wordpress,
+      title1: "Wordpress ",
+      title2: " Websites",
+      content: "We also provide Wordpress website at cheap Price.",
+    },
+    {
+      pic: error,
+      title1: "Error",
+      title2: " Solving",
+      content: "We also provide free Technical support.",
+    },
+    {
+      pic: web,
+      title1: "Web",
+      title2: " Development",
+      content:
+        "We can create any kind of application according to your requirement.",
+    },
+    {
+      pic: web,
+      title1: "Web",
+      title2: " Into Application",
+      content:
+        "We can create any kind of application according to your requirement.",
+    },
   ];
   return (
     <>
       <ShowcaseOne value={showcase1} />
 
-      {servicepacks.map((servicepack) => {
-        return (
-          <>
-            <ServiceBox data={servicepack} />
-          </>
-        );
-      })}
+      <Box sx={{ width: "80%", m: "auto" }}>
+        <Grid container>
+          {servicepacks.map((servicepack) => {
+            return (
+              <>
+                <Grid item xs={12} sm={6} md={4}>
+                  <ServiceBox data={servicepack} />
+                </Grid>
+              </>
+            );
+          })}
+        </Grid>
+      </Box>
     </>
   );
 };

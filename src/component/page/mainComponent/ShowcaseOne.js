@@ -22,8 +22,8 @@ const ShowcaseOne = (props) => {
             height: { sx: "50%", sm: "75%", md: "100%" },
           }}
         >
-          <Grid item xs={6} sx={{}}>
-            <Box sx={{ pl: { xs: 3, sm: 8 }, py: {} }}>
+          <Grid item xs={7} sx={{ py: 2 }}>
+            <Box sx={{ pl: { xs: 3, sm: 8 } }}>
               <Typography
                 component="div"
                 variant="h1"
@@ -78,7 +78,7 @@ const ShowcaseOne = (props) => {
               </Grid>
             </Box>
           </Grid>
-          <Grid item xs={6} sx={{}}></Grid>
+          <Grid item xs={5} sx={{}}></Grid>
         </Grid>
       </Box>
     </>

@@ -1,9 +1,9 @@
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
-import test from "../../images/test.png";
+import service from "../../images/serviceindex.png";
 
 const Service = () => {
   const showcase1 = {
-    pic: test,
+    pic: service,
     title: "CodingSick",
     content:
       "provding the best costumer service. This is the plateform where you can develop your dream projects. we are here to do your work.",

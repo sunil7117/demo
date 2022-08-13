@@ -65,10 +65,10 @@ const Service = () => {
 
       <Box sx={{ width: "80%", m: "auto" }}>
         <Grid container>
-          {servicepacks.map((servicepack) => {
+          {servicepacks.map((servicepack, i) => {
             return (
               <>
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} md={4} key={i}>
                   <ServiceBox data={servicepack} />
                 </Grid>
               </>

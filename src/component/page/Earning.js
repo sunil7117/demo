@@ -1,62 +1,90 @@
-import { Button, Typography, Box, Grid } from "@mui/material";
-import about1 from "../../images/about1.png";
-const Earning = (props) => {
-  console.log(props.pic);
+import { Button, Typography, Grid, Avatar, Box } from "@mui/material";
+import { borderRadius } from "@mui/system";
+
+import { FaRegCheckCircle } from "react-icons/fa";
+import dev from "../../images/dev.png";
+
+const Earning = () => {
+  const devinfo = {
+    devName: "Dev",
+    image: dev,
+    devdetails: [
+      { title: "Your Lifetime Earning", value: "INR- 5000" },
+      { title: "Total No. of Project", value: "50" },
+      { title: "Projects Done", value: "25" },
+      { title: "This Month Earnings", value: "INR-8000" },
+      { title: "Pending Amount", value: "INR-5000" },
+      { title: "Pending Project", value: "25" },
+      { title: "Holding Projects Amount", value: "INR -3000/per pj" },
+    ],
+  };
   return (
     <>
-      <Box
-        component="div"
-        sx={{
-          backgroundImage: `url(${about1})`,
-          backgroundSize: "100%",
-          height: "100vh",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <Grid container>
-          <Grid item xs={12} md={5} sx={{ backgroundColor: "blue" }}></Grid>
-          <Grid item xs={12} md={7} sx={{ backgroundColor: "" }}>
-            <Box sx={{ px: { xs: 3, sm: 8 }, py: {} }}>
-              <Typography component="div" variant="h3" sx={{}}>
-                {props.title}
-              </Typography>
-              <Grid container>
-                <Grid item xs={6} md={12}>
-                  <Box
-                    sx={{
-                      width: { xs: 200, sm: 400, md: 600 },
-                    }}
+      <Box>
+        <Box
+          sx={{
+            backgroundColor: "green",
+            display: "flex",
+            alignItems: "center",
+            m: "auto",
+            width: "95%",
+          }}
+        >
+          <Avatar alt="devloper" src={devinfo.image} sx={{ p: 1 }} />
+          <Typography
+            component="div"
+            variant="h4"
+            sx={{ p: 1, color: "white" }}
+          >
+            {devinfo.devName}
+          </Typography>
+          <Box sx={{ p: 1, color: "white" }}>
+            <FaRegCheckCircle />
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            backgroundColor: "lightblue",
+            width: "95%",
+            m: "auto",
+          }}
+        >
+          <Grid container>
+            {devinfo.devdetails.map((detail) => {
+              return (
+                <>
+                  <Grid
+                    item
+                    // sx={{ border: "2px solid blue", borderRadius: 2 }}
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    p={2}
                   >
-                    <Typography
-                      component="div"
-                      variant="p"
+                    <Box
+                      textAlign="center"
                       sx={{
-                        overflow: "hidden",
-                        height: 85,
-                        fontSize: 20,
+                        width: 250,
+                        m: "auto",
+                        border: "2px solid blue",
+                        borderRadius: 2,
                       }}
                     >
-                      {props.content}
-                    </Typography>
-                  </Box>
-                </Grid>
-                <Grid item xs={6}></Grid>
-              </Grid>
-              <Grid container sx={{ pt: 3 }}>
-                <Grid item md={6}>
-                  <Button variant="contained" size="small">
-                    {props.btn1}
-                  </Button>
-                </Grid>
-                <Grid item md={6}>
-                  <Button variant="contained" size="small">
-                    {props.btn2}
-                  </Button>
-                </Grid>
-              </Grid>
-            </Box>
+                      <Typography
+                        sx={{ fontSize: 20, fontWeight: 600, color: "red" }}
+                      >
+                        {detail.title}
+                      </Typography>
+                      <Typography sx={{ fontSize: 20, fontWeight: 600 }}>
+                        {detail.value}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                </>
+              );
+            })}
           </Grid>
-        </Grid>
+        </Box>
       </Box>
     </>
   );

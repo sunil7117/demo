@@ -19,7 +19,7 @@ export default function Footer() {
     <>
       <Box sx={{ backgroundColor: "gray", color: "white" }}>
         <Grid container>
-          <Grid item xs={12} sm={4} sx={{}}>
+          <Grid item xs={12} sm={3} sx={{}}>
             <Box
               sx={{
                 display: "flex",
@@ -36,95 +36,141 @@ export default function Footer() {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4} sx={{}}>
-            <Card
+          <Grid item xs={12} sm={5} sx={{}}>
+            <Grid
+              container
               sx={{
-                border: "none",
-                boxShadow: "none",
-                backgroundColor: "inherit",
+                backgroundColor: "red",
+                height: "100%",
+                alignItems: "center",
               }}
             >
-              <CardHeader
-                sx={{ padding: 1 }}
-                avatar={
-                  <Avatar>
-                    <ImLocation2 />
-                  </Avatar>
-                }
-                title={
-                  <Typography sx={{ color: "white" }}>
-                    Delhi,Sector-9 India
-                  </Typography>
-                }
-              />
-            </Card>
-            <Card
-              sx={{
-                border: "none",
-                boxShadow: "none",
-                backgroundColor: "inherit",
-              }}
-            >
-              <CardHeader
-                sx={{ padding: 1 }}
-                avatar={
-                  <Avatar>
-                    <FiPhoneCall />
-                  </Avatar>
-                }
-                title={
-                  <Typography component="a" href="#" sx={{ color: "white" }}>
-                    123456789
-                  </Typography>
-                }
-              />
-            </Card>
-            <Card
-              sx={{
-                border: "none",
-                boxShadow: "none",
-                backgroundColor: "inherit",
-              }}
-            >
-              <CardHeader
-                sx={{ padding: 1 }}
-                avatar={
-                  <Avatar>
-                    <FiMail />
-                  </Avatar>
-                }
-                title={
-                  <Typography component="a" href="#" sx={{ color: "white" }}>
-                    codingsick.gmail.com
-                  </Typography>
-                }
-              />
-            </Card>
-            <Card
-              sx={{
-                border: "none",
-                boxShadow: "none",
-                backgroundColor: "inherit",
-              }}
-            >
-              <CardHeader
-                sx={{ padding: 1 }}
-                avatar={
-                  <Avatar>
-                    <FaStackOverflow />
-                  </Avatar>
-                }
-                title={
-                  <Typography component="a" href="#" sx={{ color: "white" }}>
-                    codingsick.com
-                  </Typography>
-                }
-              />
-            </Card>
+              <Grid item md={12} sm={6} xs={6} sx={{ backgroundColor: "pink" }}>
+                <Card
+                  sx={{
+                    border: "none",
+                    boxShadow: "none",
+                    backgroundColor: "inherit",
+                  }}
+                >
+                  <CardHeader
+                    sx={{ padding: 1 }}
+                    avatar={
+                      <Avatar>
+                        <ImLocation2 />
+                      </Avatar>
+                    }
+                    title={
+                      <Typography sx={{ color: "white" }}>
+                        Delhi,Sector-9 India
+                      </Typography>
+                    }
+                  />
+                </Card>
+              </Grid>
+              <Grid
+                item
+                md={12}
+                sm={6}
+                xs={6}
+                sx={{ backgroundColor: "purple" }}
+              >
+                <Card
+                  sx={{
+                    border: "none",
+                    boxShadow: "none",
+                    backgroundColor: "inherit",
+                  }}
+                >
+                  <CardHeader
+                    sx={{ padding: 1 }}
+                    avatar={
+                      <Avatar>
+                        <FiPhoneCall />
+                      </Avatar>
+                    }
+                    title={
+                      <Typography
+                        component="a"
+                        href="#"
+                        sx={{ color: "white" }}
+                      >
+                        123456789
+                      </Typography>
+                    }
+                  />
+                </Card>
+              </Grid>
+              <Grid item md={12} sm={6} xs={6} sx={{ backgroundColor: "blue" }}>
+                <Card
+                  sx={{
+                    border: "none",
+                    boxShadow: "none",
+                    backgroundColor: "inherit",
+                  }}
+                >
+                  <CardHeader
+                    sx={{ padding: 1 }}
+                    avatar={
+                      <Avatar>
+                        <FiMail />
+                      </Avatar>
+                    }
+                    title={
+                      <Typography
+                        component="a"
+                        href="#"
+                        sx={{ color: "white" }}
+                      >
+                        codingsick.gmail.com
+                      </Typography>
+                    }
+                  />
+                </Card>
+              </Grid>
+              <Grid
+                item
+                md={12}
+                sm={6}
+                xs={6}
+                sx={{ backgroundColor: "voilet" }}
+              >
+                <Card
+                  sx={{
+                    border: "none",
+                    boxShadow: "none",
+                    backgroundColor: "inherit",
+                  }}
+                >
+                  <CardHeader
+                    sx={{ padding: 1 }}
+                    avatar={
+                      <Avatar>
+                        <FaStackOverflow />
+                      </Avatar>
+                    }
+                    title={
+                      <Typography
+                        component="a"
+                        href="#"
+                        sx={{ color: "white" }}
+                      >
+                        codingsick.com
+                      </Typography>
+                    }
+                  />
+                </Card>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs={12} sm={4} sx={{ p: 2 }}>
             <Box>
-              <Typography variant="h4">About the compony</Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: 25 }, fontWeight: 600 }}
+              >
+                About the compony
+              </Typography>
             </Box>
             <Box>
               <Typography variant="p">

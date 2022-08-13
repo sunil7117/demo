@@ -26,14 +26,14 @@ import {
 } from "react-icons/fi";
 import { RiTeamFill, RiAccountCircleFill } from "react-icons/ri";
 const pages = [
-  { link: "home", icon: <FiHome /> },
-  { link: "about", icon: <RiAccountCircleFill /> },
-  { link: "service", icon: <FiSettings /> },
-  { link: "earning", icon: <FiDollarSign /> },
-  { link: "project", icon: <FiShoppingCart /> },
-  { link: "account", icon: <RiAccountCircleFill /> },
-  { link: "support", icon: <FiHeadphones /> },
-  { link: "team", icon: <RiTeamFill /> },
+  { link: "Home", icon: <FiHome /> },
+  { link: "About", icon: <RiAccountCircleFill /> },
+  { link: "Service", icon: <FiSettings /> },
+  { link: "Earning", icon: <FiDollarSign /> },
+  { link: "Project", icon: <FiShoppingCart /> },
+  { link: "Account", icon: <RiAccountCircleFill /> },
+  { link: "Support", icon: <FiHeadphones /> },
+  { link: "Team", icon: <RiTeamFill /> },
 ];
 
 const Navbar = () => {
@@ -95,7 +95,7 @@ const Navbar = () => {
                     component={NavLink}
                     to={page.link}
                     sx={{
-                      textTransform: "uppercase",
+                      textTransform: "none",
                       textDecoration: "none",
                     }}
                   >
@@ -128,6 +128,7 @@ const Navbar = () => {
                   to={page.link}
                   onClick={handleCloseNavMenu}
                   sx={{
+                    textTransform: "none",
                     color: "white",
                   }}
                 >

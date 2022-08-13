@@ -40,12 +40,11 @@ export default function Footer() {
             <Grid
               container
               sx={{
-                backgroundColor: "red",
                 height: "100%",
                 alignItems: "center",
               }}
             >
-              <Grid item md={12} sm={6} xs={6} sx={{ backgroundColor: "pink" }}>
+              <Grid item md={12} sm={6} xs={6} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -68,13 +67,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid
-                item
-                md={12}
-                sm={6}
-                xs={6}
-                sx={{ backgroundColor: "purple" }}
-              >
+              <Grid item md={12} sm={6} xs={6} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -101,7 +94,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid item md={12} sm={6} xs={6} sx={{ backgroundColor: "blue" }}>
+              <Grid item md={12} sm={6} xs={6} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -128,13 +121,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid
-                item
-                md={12}
-                sm={6}
-                xs={6}
-                sx={{ backgroundColor: "voilet" }}
-              >
+              <Grid item md={12} sm={6} xs={6} sx={{}}>
                 <Card
                   sx={{
                     border: "none",

@@ -14,21 +14,26 @@ import {
 // ----------------------
 import MenuIcon from "@mui/icons-material/Menu";
 
-import HomeIcon from "@mui/icons-material/Home";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
 import { NavLink } from "react-router-dom";
 import SigninSignup from "./loginSinginComponent/SigninSignup";
 import logo from "../images/logo.png";
+import {
+  FiSettings,
+  FiDollarSign,
+  FiShoppingCart,
+  FiHeadphones,
+  FiHome,
+} from "react-icons/fi";
+import { RiTeamFill, RiAccountCircleFill } from "react-icons/ri";
 const pages = [
-  { link: "home", icon: <HomeIcon /> },
-  { link: "about", icon: <AccountCircleIcon /> },
-  { link: "service" },
-  { link: "earning" },
-  { link: "project" },
-  { link: "account" },
-  { link: "support" },
-  { link: "team" },
+  { link: "home", icon: <FiHome /> },
+  { link: "about", icon: <RiAccountCircleFill /> },
+  { link: "service", icon: <FiSettings /> },
+  { link: "earning", icon: <FiDollarSign /> },
+  { link: "project", icon: <FiShoppingCart /> },
+  { link: "account", icon: <RiAccountCircleFill /> },
+  { link: "support", icon: <FiHeadphones /> },
+  { link: "team", icon: <RiTeamFill /> },
 ];
 
 const Navbar = () => {
@@ -94,6 +99,9 @@ const Navbar = () => {
                       textDecoration: "none",
                     }}
                   >
+                    <IconButton component="span" sx={{ width: 32 }}>
+                      {page.icon}
+                    </IconButton>
                     {page.link}
                   </Typography>
                 </MenuItem>
@@ -123,6 +131,12 @@ const Navbar = () => {
                     color: "white",
                   }}
                 >
+                  <IconButton
+                    component="span"
+                    sx={{ width: 32, color: "white" }}
+                  >
+                    {page.icon}
+                  </IconButton>
                   {page.link}
                 </Button>
               ))}

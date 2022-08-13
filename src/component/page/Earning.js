@@ -1,5 +1,4 @@
-import { Button, Typography, Grid, Avatar, Box } from "@mui/material";
-import { borderRadius } from "@mui/system";
+import { Typography, Grid, Avatar, Box } from "@mui/material";
 
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";

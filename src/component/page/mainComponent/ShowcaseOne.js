@@ -1,7 +1,9 @@
 import { Button, Typography, Box, Grid } from "@mui/material";
-
+// import { BsChevronRight } from "react-icons/bs";
 const ShowcaseOne = (props) => {
-  // console.log(props.value.pic);
+  const btn2 = props.value.btn2;
+  // const btnIcon = props.value.btn1.btnIcon;
+
   return (
     <>
       <Box
@@ -9,8 +11,8 @@ const ShowcaseOne = (props) => {
         sx={{
           backgroundImage: `url(${props.value.pic})`,
           backgroundSize: "100% 100%",
-          backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "content-box",
           mb: 2,
           height: { xs: 250, sm: 400, md: 550 },
         }}
@@ -19,15 +21,16 @@ const ShowcaseOne = (props) => {
           container
           alignItems="center"
           sx={{
-            height: { sx: "50%", sm: "75%", md: "100%" },
+            // background: "blue",
+            height: { sx: "100%", sm: "100%", md: "100%" },
           }}
         >
           <Grid item xs={7} sx={{ py: 2 }}>
-            <Box sx={{ pl: { xs: 3, sm: 8 } }}>
+            <Box sx={{ pl: { xs: 3, sm: 10 } }}>
               <Typography
                 component="div"
                 variant="h1"
-                sx={{ fontSize: { xs: 25, sm: 32, md: 42 }, fontWeight: 600 }}
+                sx={{ fontSize: { xs: 32, sm: 32, md: 42 }, fontWeight: 600 }}
               >
                 {props.value.title}
               </Typography>
@@ -35,6 +38,7 @@ const ShowcaseOne = (props) => {
                 <Grid item xs={6} md={12}>
                   <Box
                     sx={{
+                      background: "red",
                       width: { xs: 210, sm: 400, md: 600 },
                       pb: 1,
                     }}
@@ -45,7 +49,7 @@ const ShowcaseOne = (props) => {
                       sx={{
                         overflow: { xs: "hidden", sm: "hidden", md: "visible" },
                         height: { xs: 95, sm: 100 },
-                        fontSize: { xs: 18, sm: 20 },
+                        fontSize: { xs: 16, sm: 16 },
                       }}
                     >
                       {props.value.content}
@@ -60,21 +64,26 @@ const ShowcaseOne = (props) => {
                     variant="contained"
                     size="small"
                     color={props.value.btn1.btnColor}
-                    sx={{ fontSize: { xs: 11, sm: 14, md: 16 } }}
+                    sx={{ fontSize: { xs: 10, sm: 12, md: 16 } }}
                   >
                     {props.value.btn1.btnName}
+                    {/* {btnIcon === undefined ? "" : <btnIcon />} */}
                   </Button>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    color={props.value.btn2.btnColor}
-                    sx={{ fontSize: { xs: 12, sm: 14 } }}
-                  >
-                    {props.value.btn2.btnName}
-                  </Button>
-                </Grid>
+                {btn2 === undefined ? (
+                  ""
+                ) : (
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      color={props.value.btn2.btnColor}
+                      sx={{ fontSize: { xs: 10, sm: 12 } }}
+                    >
+                      {props.value.btn2.btnName}
+                    </Button>
+                  </Grid>
+                )}
               </Grid>
             </Box>
           </Grid>

@@ -9,7 +9,7 @@ const ShowcaseTwo = (props) => {
         sx={{
           backgroundImage: `url(${props.value.pic})`,
           backgroundSize: "100% 100%",
-          backgroundPosition: "center center",
+          backgroundPosition: "content-box",
           backgroundRepeat: "no-repeat",
           height: { xs: 250, sm: 400, md: 550 },
         }}
@@ -18,7 +18,8 @@ const ShowcaseTwo = (props) => {
           container
           alignItems="center"
           sx={{
-            height: { sx: "50%", sm: "75%", md: "100%" },
+            // background: "blue",
+            height: { sx: "100%", sm: "100%", md: "100%" },
           }}
         >
           <Grid item xs={5} sx={{}}>
@@ -45,7 +46,11 @@ const ShowcaseTwo = (props) => {
                       component="div"
                       variant="p"
                       sx={{
-                        overflow: { xs: "hidden", sm: "hidden", md: "visible" },
+                        overflow: {
+                          xs: "hidden",
+                          sm: "hidden",
+                          md: "visible",
+                        },
                         height: { xs: 95, sm: 100 },
                         fontSize: { xs: 18, sm: 20 },
                       }}

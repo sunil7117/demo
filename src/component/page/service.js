@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import service from "../../images/serviceindex.png";
 import ServiceBox from "./serviceComponent/ServiceBox";
@@ -62,8 +62,11 @@ const Service = () => {
   return (
     <>
       <ShowcaseOne value={showcase1} />
-
       <Box sx={{ width: "80%", m: "auto" }}>
+        <Typography variant="h2" textAlign="center">
+          Services
+        </Typography>
+
         <Grid container>
           {servicepacks.map((servicepack, i) => {
             return (

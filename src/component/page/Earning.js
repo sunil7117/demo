@@ -2,8 +2,25 @@ import { Typography, Grid, Avatar, Box } from "@mui/material";
 
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";
+import ShowcaseOne from "./mainComponent/ShowcaseOne";
+import About1 from "../../images/about1.png";
 
 const Earning = () => {
+  const showcase1 = {
+    pic: About1,
+    title: "Get Paid",
+    child: [
+      {
+        content1: "sometiing",
+        content2: "someting",
+        btn: "create",
+      },
+    ],
+    content:
+      "if you want to earn then create partner account with us and start earning instantly in some easy steps.",
+    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    // btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
+  };
   const devinfo = {
     devName: "Dev",
     image: dev,
@@ -19,7 +36,20 @@ const Earning = () => {
   };
   return (
     <>
+      <ShowcaseOne value={showcase1}>
+        <Grid container>
+          <Grid item xs={6} sx={{ backgroundColor: "red" }}>
+            one
+          </Grid>
+          <Grid item xs={6} sx={{ backgroundColor: "blue" }}>
+            Two
+          </Grid>
+        </Grid>
+      </ShowcaseOne>
       <Box>
+        <Typography variant="h2" textAlign="center">
+          Earnings
+        </Typography>
         <Box
           sx={{
             backgroundColor: "green",
@@ -49,7 +79,7 @@ const Earning = () => {
           }}
         >
           <Grid container>
-            {devinfo.devdetails.map((detail) => {
+            {devinfo.devdetails.map((detail, i) => {
               return (
                 <>
                   <Grid
@@ -59,6 +89,7 @@ const Earning = () => {
                     sm={6}
                     md={4}
                     p={2}
+                    key={i}
                   >
                     <Box
                       textAlign="center"

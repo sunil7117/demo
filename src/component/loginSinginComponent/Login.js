@@ -13,7 +13,7 @@ const Login = () => {
   };
   return (
     <div>
-      <Box>
+      <Box sx={{ height: 450 }}>
         <Typography sx={{ fontSize: 32, fontWeight: 600 }}>Login</Typography>
         <Box component="form" id="login" noValidate onSubmit={handleLogin}>
           <TextField
@@ -22,7 +22,7 @@ const Login = () => {
             name="email"
             variant="outlined"
             fullWidth
-            margin="normal"
+            margin="dense"
           />
           <TextField
             label="Password"
@@ -30,7 +30,7 @@ const Login = () => {
             name="password"
             variant="outlined"
             fullWidth
-            margin="normal"
+            margin="dense"
           />
           <Button type="submit" variant="contained">
             Login

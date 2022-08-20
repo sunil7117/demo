@@ -30,7 +30,11 @@ const ShowcaseOne = (props) => {
               <Typography
                 component="div"
                 variant="h1"
-                sx={{ fontSize: { xs: 32, sm: 32, md: 42 }, fontWeight: 600 }}
+                sx={{
+                  fontSize: { xs: 32, sm: 32, md: 52 },
+                  fontWeight: 700,
+                  color: "red",
+                }}
               >
                 {props.value.title}
               </Typography>
@@ -38,7 +42,6 @@ const ShowcaseOne = (props) => {
                 <Grid item xs={6} md={12}>
                   <Box
                     sx={{
-                      background: "red",
                       width: { xs: 210, sm: 400, md: 600 },
                       pb: 1,
                     }}
@@ -49,7 +52,7 @@ const ShowcaseOne = (props) => {
                       sx={{
                         overflow: { xs: "hidden", sm: "hidden", md: "visible" },
                         height: { xs: 95, sm: 100 },
-                        fontSize: { xs: 16, sm: 16 },
+                        fontSize: { xs: 16, sm: 22 },
                       }}
                     >
                       {props.value.content}

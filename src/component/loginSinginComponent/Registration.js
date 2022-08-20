@@ -38,7 +38,7 @@ const Registration = () => {
   };
   return (
     <div>
-      <Box>
+      <Box sx={{ height: 450 }}>
         <Typography sx={{ fontSize: 32, fontWeight: 600 }}>
           Registration
         </Typography>

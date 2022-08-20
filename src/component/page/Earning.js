@@ -18,7 +18,7 @@ const Earning = () => {
     ],
     content:
       "if you want to earn then create partner account with us and start earning instantly in some easy steps.",
-    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
+    btn1: { btnName: "Learn More", btnIcon: "icon", btnColor: "primary" },
     // btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
   };
   const devinfo = {
@@ -47,9 +47,22 @@ const Earning = () => {
         </Grid>
       </ShowcaseOne>
       <Box>
-        <Typography variant="h2" textAlign="center">
-          Earnings
-        </Typography>
+        <Box paddingBottom={2}>
+          <Typography
+            textAlign="center"
+            sx={{
+              lineHeight: { xs: 1 },
+              fontSize: { xs: 42, md: 52 },
+              fontWeight: 600,
+            }}
+          >
+            <span style={{ color: "red" }}>Earning </span>Dashboard
+          </Typography>
+          <Typography textAlign="center" sx={{ fontSize: 20, fontWeight: 300 }}>
+            This is our earning Dashboard/protfolio.
+          </Typography>
+        </Box>
+
         <Box
           sx={{
             backgroundColor: "green",

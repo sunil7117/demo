@@ -1,8 +1,26 @@
 import { Grid, Typography, Box, Avatar } from "@mui/material";
+import ShowcaseOne from "./mainComponent/ShowcaseOne";
+import About1 from "../../images/about1.png";
 import andr from "../../images/and1.png";
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";
 const Project = () => {
+  const showcase1 = {
+    pic: About1,
+    title: "Start Your Project",
+    child: [
+      {
+        content1: "sometiing",
+        content2: "someting",
+        btn: "create",
+      },
+    ],
+    content:
+      "if you want to earn then create partner account with us and start earning instantly in some easy steps.",
+    btn1: { btnName: "Learn More", btnIcon: "icon", btnColor: "primary" },
+    // btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
+  };
+
   const projectData = {
     devName: "Dev",
     image: dev,
@@ -13,30 +31,48 @@ const Project = () => {
       },
       {
         pic: andr,
-        title: "Andriod App Development",
+        title: "E-com / FlipZone",
       },
       {
         pic: andr,
-        title: "Andriod App Development",
+        title: "Project Update",
       },
     ],
     oldData: [
       {
         pic: andr,
-        title: "Andriod App Development",
-      },
-      {
-        pic: andr,
-        title: "Andriod App Development",
+        title: "codingsick.com / wordpress site",
       },
     ],
   };
   return (
     <>
+      <ShowcaseOne value={showcase1}>
+        <Grid container>
+          <Grid item xs={6} sx={{ backgroundColor: "red" }}>
+            one
+          </Grid>
+          <Grid item xs={6} sx={{ backgroundColor: "blue" }}>
+            Two
+          </Grid>
+        </Grid>
+      </ShowcaseOne>
       <Box>
-        <Typography variant="h2" textAlign="center">
-          Projects
-        </Typography>
+        <Box paddingBottom={2}>
+          <Typography
+            textAlign="center"
+            sx={{
+              lineHeight: { xs: 1 },
+              fontSize: { xs: 42, md: 52 },
+              fontWeight: 600,
+            }}
+          >
+            <span style={{ color: "red" }}>Your </span>Project
+          </Typography>
+          <Typography textAlign="center" sx={{ fontSize: 20, fontWeight: 300 }}>
+            This is our earning Dashboard/protfolio.
+          </Typography>
+        </Box>
         <Box
           sx={{
             backgroundColor: "green",
@@ -59,10 +95,10 @@ const Project = () => {
           </Box>
         </Box>
       </Box>
-      <Grid container justifyContent="space-between" columnSpacing={5} px={3}>
-        <Grid item xs={12} sm={6}>
+      <Grid container justifyContent="space-around" columnSpacing={5} px={3}>
+        <Grid item xs={10} sm={5}>
           <Typography sx={{ fontSize: { xs: 31, md: 42 }, fontWeight: 600 }}>
-            <span style={{ color: "red" }}> Old</span> Project
+            <span style={{ color: "red" }}> Latest</span> Project
           </Typography>
           <Box sx={{ width: "100%", p: 0.3 }}>
             {projectData.newData.map((Data) => {
@@ -104,7 +140,7 @@ const Project = () => {
             })}
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={10} sm={5}>
           <Typography sx={{ fontSize: { xs: 31, md: 42 }, fontWeight: 600 }}>
             <span style={{ color: "red" }}> Old</span> Project
           </Typography>

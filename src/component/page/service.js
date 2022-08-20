@@ -11,11 +11,10 @@ import error from "../../images/error.png";
 const Service = () => {
   const showcase1 = {
     pic: service,
-    title: "CodingSick",
+    title: "Your Wishes Our services",
     content:
-      "provding the best costumer service. This is the plateform where you can develop your dream projects. we are here to do your work.",
-    btn1: { btnName: "Start Earning", btnIcon: "icon", btnColor: "primary" },
-    btn2: { btnName: "Give Work", btnIcon: "icon", btnColor: "error" },
+      "We are providing you the best customer sevice across the world. CodingSick provies many kind of Technical Support for Free of Cost.",
+    btn1: { btnName: "Learn More", btnIcon: "icon", btnColor: "primary" },
   };
   const servicepacks = [
     {
@@ -63,9 +62,21 @@ const Service = () => {
     <>
       <ShowcaseOne value={showcase1} />
       <Box sx={{ width: "80%", m: "auto" }}>
-        <Typography variant="h2" textAlign="center">
-          Services
-        </Typography>
+        <Box paddingBottom={2}>
+          <Typography
+            textAlign="center"
+            sx={{
+              lineHeight: { xs: 1 },
+              fontSize: { xs: 42, md: 52 },
+              fontWeight: 600,
+            }}
+          >
+            <span style={{ color: "red" }}>Service </span>Dashboard
+          </Typography>
+          <Typography textAlign="center" sx={{ fontSize: 20, fontWeight: 300 }}>
+            This is our earning Dashboard/protfolio.
+          </Typography>
+        </Box>
 
         <Grid container>
           {servicepacks.map((servicepack, i) => {

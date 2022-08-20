@@ -1,6 +1,7 @@
 import { Button, Typography, Box, Grid } from "@mui/material";
 
 const ShowcaseTwo = (props) => {
+  const btn2 = props.value.btn2;
   // console.log(props.value.pic);
   return (
     <>
@@ -30,7 +31,12 @@ const ShowcaseTwo = (props) => {
               <Typography
                 component="div"
                 variant="h1"
-                sx={{ fontSize: { xs: 25, sm: 32, md: 42 }, fontWeight: 600 }}
+                textAlign="center"
+                sx={{
+                  fontSize: { xs: 25, sm: 32, md: 52 },
+                  fontWeight: 700,
+                  color: "red",
+                }}
               >
                 {props.value.title}
               </Typography>
@@ -52,7 +58,7 @@ const ShowcaseTwo = (props) => {
                           md: "visible",
                         },
                         height: { xs: 95, sm: 100 },
-                        fontSize: { xs: 18, sm: 20 },
+                        fontSize: { xs: 16, sm: 22 },
                       }}
                     >
                       {props.value.content}
@@ -72,16 +78,20 @@ const ShowcaseTwo = (props) => {
                     {props.value.btn1.btnName}
                   </Button>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <Button
-                    variant="outlined"
-                    size="small"
-                    color={props.value.btn2.btnColor}
-                    sx={{ fontSize: { xs: 12, sm: 14 } }}
-                  >
-                    {props.value.btn2.btnName}
-                  </Button>
-                </Grid>
+                {btn2 === undefined ? (
+                  ""
+                ) : (
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      color={props.value.btn2.btnColor}
+                      sx={{ fontSize: { xs: 10, sm: 12 } }}
+                    >
+                      {props.value.btn2.btnName}
+                    </Button>
+                  </Grid>
+                )}
               </Grid>
             </Box>
           </Grid>

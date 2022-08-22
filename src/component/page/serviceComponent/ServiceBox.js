@@ -10,14 +10,17 @@ const ServiceBox = (props) => {
           flexWrap: "wrap",
           "& > :not(style)": {
             m: 1,
-            width: 250,
-            height: 230,
-            border: "blue 2px solid",
+            width: 350,
+            height: 200,
+            border: "#87CEFA 2px solid",
           },
         }}
       >
         <Paper elevation={3} sx={{ backgroundColor: "#E9ECEF", px: 2 }}>
-          <Box width="60%" sx={{ border: "5px solid red", m: "auto" }}></Box>
+          <Box
+            width="60%"
+            sx={{ border: "3px solid #AFB2B4", m: "auto" }}
+          ></Box>
           <Box sx={{ pt: 1 }}>
             <Typography
               component="img"
@@ -29,7 +32,7 @@ const ServiceBox = (props) => {
             <Typography
               component="div"
               variant="h5"
-              sx={{ display: "inline", color: "red", fontWeight: 600 }}
+              sx={{ display: "inline", color: "#DC3545", fontWeight: 600 }}
             >
               {props.data.title1}
             </Typography>

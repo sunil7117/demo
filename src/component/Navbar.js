@@ -57,7 +57,7 @@ const Navbar = () => {
             component="img"
             alt="logo"
             src={logo}
-            sx={{ width: 190, display: { xs: "none", md: "flex" }, mr: 1 }}
+            sx={{ width: 140, display: { xs: "none", md: "flex" }, mr: 1 }}
           />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -119,8 +119,13 @@ const Navbar = () => {
               }}
             />
           </Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, m: "auto" }}>
+            <Box
+              sx={{
+                display: { xs: "none", md: "flex" },
+                justifyContent: "center",
+              }}
+            >
               {pages.map((page, i) => (
                 <Button
                   key={i}
@@ -130,11 +135,12 @@ const Navbar = () => {
                   sx={{
                     textTransform: "none",
                     color: "white",
+                    p: 0.8,
                   }}
                 >
                   <IconButton
                     component="span"
-                    sx={{ width: 32, color: "white" }}
+                    sx={{ width: 30, color: "white" }}
                   >
                     {page.icon}
                   </IconButton>

@@ -1,14 +1,23 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <Box sx={{ width: "100%" }}>
+        <Box>
+          <Navbar />
+        </Box>
+        <Box sx={{}}>
+          <Outlet />
+        </Box>
 
-      <Footer />
+        <Box>
+          <Footer />
+        </Box>
+      </Box>
     </>
   );
 };

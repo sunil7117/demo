@@ -10,8 +10,8 @@ const ShowcaseTwo = (props) => {
         sx={{
           backgroundImage: `url(${props.value.pic})`,
           backgroundSize: "100% 100%",
-          backgroundPosition: "content-box",
           backgroundRepeat: "no-repeat",
+          mb: 2,
           height: { xs: 250, sm: 400, md: 550 },
         }}
       >
@@ -19,15 +19,13 @@ const ShowcaseTwo = (props) => {
           container
           alignItems="center"
           sx={{
-            // background: "blue",
             height: { sx: "100%", sm: "100%", md: "100%" },
           }}
         >
-          <Grid item xs={5} sx={{}}>
-            1
-          </Grid>
+          <Grid item xs={5} sx={{}}></Grid>
           <Grid item xs={7} sx={{ py: 2 }}>
             <Box sx={{ pr: { xs: 3, sm: 8 } }}>
+              {/*  Show case two Title settings */}
               <Typography
                 component="div"
                 variant="h1"
@@ -36,16 +34,19 @@ const ShowcaseTwo = (props) => {
                   fontSize: { xs: 25, sm: 32, md: 52 },
                   fontWeight: 700,
                   color: "red",
+                  mb: { xs: 1, md: 10 },
                 }}
               >
                 {props.value.title}
               </Typography>
+              {/*  Show case Two Title settings */}
               <Grid container>
+                {/*  Show case one contentBox settings */}
                 <Grid item xs={6} md={12}>
                   <Box
                     sx={{
                       width: { xs: 200, sm: 300, md: 600 },
-                      pb: 1,
+                      mb: { xs: 1, md: 10 },
                     }}
                   >
                     <Typography
@@ -65,9 +66,12 @@ const ShowcaseTwo = (props) => {
                     </Typography>
                   </Box>
                 </Grid>
+                {/*  Show case one contentBox settings */}
+                {/*  dummy below */}
                 <Grid item xs={6}></Grid>
               </Grid>
-              <Grid container sx={{ pt: 1 }} spacing={0.5}>
+              <Grid container sx={{ mt: { xs: -2 } }} spacing={0.5}>
+                {/*  Show case one buttonBox-1 settings */}
                 <Grid item xs={12} md={6}>
                   <Button
                     variant="contained"
@@ -78,6 +82,9 @@ const ShowcaseTwo = (props) => {
                     {props.value.btn1.btnName}
                   </Button>
                 </Grid>
+
+                {/*  Show case one buttonBox-1 settings */}
+                {/*  Show case one buttonBox-2 settings With conditons */}
                 {btn2 === undefined ? (
                   ""
                 ) : (
@@ -92,6 +99,7 @@ const ShowcaseTwo = (props) => {
                     </Button>
                   </Grid>
                 )}
+                {/*  Show case one buttonBox-2 settings With conditons */}
               </Grid>
             </Box>
           </Grid>

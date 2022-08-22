@@ -31,7 +31,7 @@ const Registration = () => {
       Password: data.get("password"),
       confrim_Password: data.get("confrim_password"),
       client: data.get("client"),
-      developer_role: data.get("developer_role"),
+      developer_role: data.getAll("developer_role"),
     };
     console.log(actualData);
     document.getElementById("registration").reset();

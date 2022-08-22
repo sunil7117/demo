@@ -8,6 +8,7 @@ import ux from "../../images/uiux.png";
 import web from "../../images/web.png";
 import wordpress from "../../images/wordpress.png";
 import error from "../../images/error.png";
+import convert from "../../images/convert.png";
 const Service = () => {
   const showcase1 = {
     pic: service,
@@ -51,7 +52,7 @@ const Service = () => {
         "We can create any kind of application according to your requirement.",
     },
     {
-      pic: web,
+      pic: convert,
       title1: "Web",
       title2: " Into Application",
       content:

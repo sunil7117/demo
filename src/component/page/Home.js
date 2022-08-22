@@ -1,7 +1,6 @@
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import ShowcaseTwo from "./mainComponent/ShowcaseTwo";
 import index1 from "../../images/serviceindex.png";
-
 import img from "../../images/img.png";
 const Home = () => {
   const showcase1 = {

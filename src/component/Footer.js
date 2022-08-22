@@ -19,7 +19,8 @@ export default function Footer() {
     <>
       <Box sx={{ backgroundColor: "gray", color: "white" }}>
         <Grid container>
-          <Grid item xs={12} sm={3} sx={{}}>
+          {/* Footer logo settings */}
+          <Grid item xs={12} sm={4} sx={{}}>
             <Box
               sx={{
                 display: "flex",
@@ -36,15 +37,11 @@ export default function Footer() {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={5} sx={{}}>
-            <Grid
-              container
-              sx={{
-                height: "100%",
-                alignItems: "center",
-              }}
-            >
-              <Grid item md={12} sm={6} xs={6} sx={{}}>
+          {/* Footer logo settings */}
+          <Grid item xs={12} sm={4} sx={{}}>
+            <Grid container>
+              {/* Company information settings */}
+              <Grid item xs={12} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -53,7 +50,7 @@ export default function Footer() {
                   }}
                 >
                   <CardHeader
-                    sx={{ padding: 1 }}
+                    sx={{ "&.MuiCardHeader-root": { p: 1 } }}
                     avatar={
                       <Avatar>
                         <ImLocation2 />
@@ -67,7 +64,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid item md={12} sm={6} xs={6} sx={{}}>
+              <Grid item xs={12} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -76,7 +73,7 @@ export default function Footer() {
                   }}
                 >
                   <CardHeader
-                    sx={{ padding: 1 }}
+                    sx={{ "&.MuiCardHeader-root": { p: 1 } }}
                     avatar={
                       <Avatar>
                         <FiPhoneCall />
@@ -94,7 +91,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid item md={12} sm={6} xs={6} sx={{}}>
+              <Grid item xs={12} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -103,7 +100,7 @@ export default function Footer() {
                   }}
                 >
                   <CardHeader
-                    sx={{ padding: 1 }}
+                    sx={{ "&.MuiCardHeader-root": { p: 1 } }}
                     avatar={
                       <Avatar>
                         <FiMail />
@@ -121,7 +118,7 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
-              <Grid item md={12} sm={6} xs={6} sx={{}}>
+              <Grid item xs={12} sx={{}}>
                 <Card
                   sx={{
                     border: "none",
@@ -130,7 +127,7 @@ export default function Footer() {
                   }}
                 >
                   <CardHeader
-                    sx={{ padding: 1 }}
+                    sx={{ "&.MuiCardHeader-root": { p: 1 } }}
                     avatar={
                       <Avatar>
                         <FaStackOverflow />
@@ -148,25 +145,29 @@ export default function Footer() {
                   />
                 </Card>
               </Grid>
+              {/* Company information settings */}
             </Grid>
           </Grid>
+          {/* Footer About company settings */}
           <Grid item xs={12} sm={4} sx={{ p: 2 }}>
             <Box>
               <Typography
                 variant="h4"
-                sx={{ fontSize: { xs: 25 }, fontWeight: 600 }}
+                sx={{ fontSize: { xs: 20 }, fontWeight: 600 }}
               >
                 About the compony
               </Typography>
             </Box>
             <Box>
-              <Typography variant="p">
+              <Typography variant="p" sx={{ fontSize: { xs: 14 } }}>
                 This is the platform where you can get your dream projects.We
                 will get design and develop projects og your idea.
               </Typography>
             </Box>
-            <Box sx={{ mt: 2 }}>
-              <Typography>Spred your love</Typography>
+            <Box sx={{ mt: 1 }}>
+              <Typography sx={{ fontSize: { xs: 14 }, fontWeight: "bold" }}>
+                Spred your love
+              </Typography>
               <Grid container justifyContent="space-around">
                 <Grid item>
                   <Avatar variant="square">
@@ -191,26 +192,29 @@ export default function Footer() {
               </Grid>
             </Box>
           </Grid>
+
+          {/* Footer About company settings */}
         </Grid>
       </Box>
+      {/* Copyright banner */}
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          px: 5,
           backgroundColor: "black",
         }}
       >
-        <Typography sx={{ color: "red", fontSize: 14 }}>
+        <Typography sx={{ color: "red", fontSize: 14, ml: 3 }}>
           <Typography component="span" sx={{ color: "white", fontSize: 14 }}>
             &copy;
           </Typography>{" "}
           codingsick
         </Typography>
-        <Typography sx={{ color: "white", fontSize: 14 }}>
+        <Typography sx={{ color: "white", fontSize: 14, mr: 3 }}>
           All Rights Reserved 2021
         </Typography>
       </Box>
+      {/* Copyright banner */}
     </>
   );
 }

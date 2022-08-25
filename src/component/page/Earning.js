@@ -48,7 +48,7 @@ const Earning = () => {
               color="primary"
               variant="contained"
               size="small"
-              sx={{ fontSize: { xs: 12, sm: 14, md: 16 }, px: 1, py: 0.3 }}
+              sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
             >
               Create
             </Button>

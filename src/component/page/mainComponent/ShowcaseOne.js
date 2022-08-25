@@ -50,8 +50,7 @@ const ShowcaseOne = (props) => {
                   md={12}
                   sx={{
                     display: "flex",
-
-                    py: { xs: 2 },
+                    py: { xs: 1, sm: 4 },
                   }}
                 >
                   <Box>
@@ -60,8 +59,6 @@ const ShowcaseOne = (props) => {
                       variant="p"
                       sx={{
                         fontSize: { xs: 14, sm: 16, md: 16 },
-
-                        py: { xs: 0.8 },
                       }}
                     >
                       {props.value.content}

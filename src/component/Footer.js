@@ -33,7 +33,7 @@ export default function Footer() {
                 component="img"
                 alt="logo"
                 src={logo}
-                sx={{ width: 190 }}
+                sx={{ width: 190, m: { xs: 2 } }}
               />
             </Box>
           </Grid>
@@ -150,25 +150,28 @@ export default function Footer() {
           </Grid>
           {/* Footer About company settings */}
           <Grid item xs={12} sm={4} sx={{ p: 2 }}>
-            <Box>
+            <Box mb={2}>
               <Typography
                 variant="h4"
-                sx={{ fontSize: { xs: 20 }, fontWeight: 600 }}
+                sx={{ fontSize: { xs: 20, md: 22 }, fontWeight: 600 }}
               >
                 About the compony
               </Typography>
             </Box>
-            <Box>
-              <Typography variant="p" sx={{ fontSize: { xs: 14 } }}>
+            <Box mb={2}>
+              <Typography variant="p" sx={{ fontSize: { xs: 14, md: 16 } }}>
                 This is the platform where you can get your dream projects.We
                 will get design and develop projects og your idea.
               </Typography>
             </Box>
-            <Box sx={{ mt: 1 }}>
-              <Typography sx={{ fontSize: { xs: 14 }, fontWeight: "bold" }}>
+            <Box>
+              <Typography
+                mb={2}
+                sx={{ fontSize: { xs: 14 }, fontWeight: "bold" }}
+              >
                 Spred your love
               </Typography>
-              <Grid container justifyContent="space-around">
+              <Grid container justifyContent="space-between">
                 <Grid item>
                   <Avatar variant="square">
                     <FaFacebook />

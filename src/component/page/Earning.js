@@ -1,4 +1,4 @@
-import { Typography, Grid, Avatar, Box } from "@mui/material";
+import { Typography, Grid, Avatar, Box, Button } from "@mui/material";
 
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";
@@ -37,29 +37,48 @@ const Earning = () => {
   return (
     <>
       <ShowcaseOne value={showcase1}>
-        <Grid container>
-          <Grid item xs={6} sx={{ backgroundColor: "red" }}>
-            one
+        <Grid container sx={{ border: "2x solid black" }}>
+          <Grid item xs={12} md={6}>
+            <Typography
+              sx={{ fontSize: { xs: 14, sm: 16, md: 20 }, color: "#DC3545" }}
+            >
+              If You want to earn
+            </Typography>
+            <Button
+              color="primary"
+              variant="contained"
+              size="small"
+              sx={{ fontSize: { xs: 12, sm: 14, md: 16 }, px: 1, py: 0.3 }}
+            >
+              Create
+            </Button>
           </Grid>
-          <Grid item xs={6} sx={{ backgroundColor: "blue" }}>
-            Two
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ fontSize: { xs: 14, sm: 16, md: 20 }, color: "#0D6EFD" }}
+          >
+            instantly partner account with us.
           </Grid>
         </Grid>
       </ShowcaseOne>
       <Box>
         {/*Earning Dashboard   */}
-        <Box paddingBottom={2}>
+        <Box>
           <Typography
             textAlign="center"
             sx={{
-              lineHeight: { xs: 1 },
-              fontSize: { xs: 42, md: 52 },
+              fontSize: { xs: 32, md: 52 },
               fontWeight: 600,
             }}
           >
             <span style={{ color: "red" }}>Earning </span>Dashboard
           </Typography>
-          <Typography textAlign="center" sx={{ fontSize: 20, fontWeight: 300 }}>
+          <Typography
+            textAlign="center"
+            sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}
+          >
             This is our earning Dashboard/protfolio.
           </Typography>
         </Box>
@@ -78,7 +97,7 @@ const Earning = () => {
               display: "flex",
               alignItems: "center",
               m: "auto",
-              width: "95%",
+              width: "96%",
             }}
           >
             <Avatar alt="devloper" src={devinfo.image} sx={{ p: 1 }} />
@@ -95,65 +114,49 @@ const Earning = () => {
           </Box>
           {/* Develper details settings */}
           {/* Develper overall details settings */}
-          <Box sx={{ p: 3 }}>
+          <Box p={2}>
             <Box
               sx={{
-                background: "rgba(255,255,255,0.5)",
-                width: "80%",
+                background: "rgba(239,240,255,0.7)",
+                width: "90%",
                 m: "auto",
-                p: 3,
+                p: { xs: 1, md: 4 },
                 borderRadius: 5,
               }}
             >
-              <Box
-                sx={{
-                  backgroundColor: "rgba(255 255 255 1 )",
-                  width: "100%",
-                  m: "auto",
-                }}
-              >
-                <Grid container>
-                  {devinfo.devdetails.map((detail, i) => {
-                    return (
-                      <>
-                        <Grid
-                          item
-                          // sx={{ border: "2px solid blue", borderRadius: 2 }}
-                          xs={12}
-                          sm={6}
-                          md={4}
-                          py={3}
-                          key={i}
+              <Grid container>
+                {devinfo.devdetails.map((detail, i) => {
+                  return (
+                    <>
+                      <Grid item xs={12} sm={6} md={4} key={i} sx={{ my: 2 }}>
+                        <Box
+                          textAlign="center"
+                          sx={{
+                            width: 250,
+                            m: "auto",
+                            border: "2px solid blue",
+                            borderRadius: 2,
+                            py: 2,
+                          }}
                         >
-                          <Box
-                            textAlign="center"
+                          <Typography
                             sx={{
-                              width: 230,
-                              m: "auto",
-                              border: "2px solid blue",
-                              borderRadius: 2,
-                              p: 1,
+                              fontSize: 20,
+                              fontWeight: 600,
+                              color: "red",
                             }}
                           >
-                            <Typography
-                              sx={{
-                                fontSize: 20,
-                                fontWeight: 600,
-                                color: "red",
-                              }}
-                            >
-                              {detail.title}
-                            </Typography>
-                            <Typography sx={{ fontSize: 20, fontWeight: 600 }}>
-                              {detail.value}
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      </>
-                    );
-                  })}
-                </Grid>
-              </Box>
+                            {detail.title}
+                          </Typography>
+                          <Typography sx={{ fontSize: 20, fontWeight: 600 }}>
+                            {detail.value}
+                          </Typography>
+                        </Box>
+                      </Grid>
+                    </>
+                  );
+                })}
+              </Grid>
             </Box>
           </Box>
           {/* Develper overall details settings */}

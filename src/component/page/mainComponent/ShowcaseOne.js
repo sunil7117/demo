@@ -12,6 +12,7 @@ const ShowcaseOne = (props) => {
           backgroundImage: `url(${props.value.pic})`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
+          // backgroundPosition: "center center",
           mb: 2,
           height: { xs: 250, sm: 400, md: 550 },
         }}
@@ -20,43 +21,47 @@ const ShowcaseOne = (props) => {
           container
           alignItems="center"
           sx={{
-            height: { sx: "100%", sm: "100%", md: "100%" },
+            height: "100%",
           }}
         >
-          <Grid item xs={7} sx={{ py: 2 }}>
-            <Box sx={{ pl: { xs: 3, sm: 10 } }}>
-              {/*  Show case one Title settings */}
-              <Typography
-                component="div"
-                variant="h1"
-                sx={{
-                  fontSize: { xs: 25, sm: 32, md: 52 },
-                  fontWeight: 700,
-                  color: "red",
-                  mb: { xs: 1, md: 10 },
-                }}
-              >
-                {props.value.title}
-              </Typography>
-              {/*  Show case one Title settings */}
+          <Grid item xs={7} sx={{}}>
+            <Box sx={{ pl: { xs: 3, sm: 10 }, py: 1 }}>
               <Grid container>
-                {/*  Show case one contentBox settings */}
-
-                <Grid item xs={6} md={12}>
-                  <Box
+                {/*  Show case one Title settings */}
+                <Grid item xs={12} md={12} sx={{ py: { sm: 3 } }}>
+                  <Typography
+                    component="div"
+                    variant="h1"
                     sx={{
-                      width: { xs: 210, sm: 400, md: 600 },
-
-                      mb: { xs: 1, md: 10 },
+                      fontSize: { xs: 24, sm: 32, md: 52 },
+                      fontWeight: 700,
+                      color: "red",
                     }}
                   >
+                    {props.value.title}
+                  </Typography>
+                  {props.children}
+                </Grid>
+                {/*  Show case one Title settings */}
+                {/*  Show case one contentBox settings */}
+                <Grid
+                  item
+                  xs={12}
+                  md={12}
+                  sx={{
+                    display: "flex",
+
+                    py: { xs: 2 },
+                  }}
+                >
+                  <Box>
                     <Typography
                       component="div"
                       variant="p"
                       sx={{
-                        overflow: { xs: "hidden", sm: "hidden", md: "visible" },
-                        height: { xs: 95, sm: 100 },
-                        fontSize: { xs: 16, sm: 22 },
+                        fontSize: { xs: 14, sm: 16, md: 16 },
+
+                        py: { xs: 0.8 },
                       }}
                     >
                       {props.value.content}
@@ -64,18 +69,15 @@ const ShowcaseOne = (props) => {
                   </Box>
                 </Grid>
                 {/*  Show case one contentBox settings */}
-                {/*  dummy below */}
-                <Grid item xs={6}></Grid>
               </Grid>
-              <Grid container sx={{ mt: { xs: -2 } }} spacing={0.5}>
+              <Grid container sx={{ py: { sm: 3 } }}>
                 {/*  Show case one buttonBox-1 settings */}
-
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{ mb: 0.5 }}>
                   <Button
                     variant="contained"
                     size="small"
                     color={props.value.btn1.btnColor}
-                    sx={{ fontSize: { xs: 10, sm: 12, md: 16 } }}
+                    sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
                   >
                     {props.value.btn1.btnName}
                   </Button>
@@ -90,7 +92,7 @@ const ShowcaseOne = (props) => {
                       variant="outlined"
                       size="small"
                       color={props.value.btn2.btnColor}
-                      sx={{ fontSize: { xs: 10, sm: 12 } }}
+                      sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
                     >
                       {props.value.btn2.btnName}
                     </Button>

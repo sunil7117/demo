@@ -4,6 +4,7 @@ import About1 from "../../images/about1.png";
 import andr from "../../images/and1.png";
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";
+import SigninSignup from "../loginSinginComponent/SigninSignup";
 const Project = () => {
   const showcase1 = {
     pic: About1,
@@ -48,12 +49,22 @@ const Project = () => {
   return (
     <>
       <ShowcaseOne value={showcase1}>
-        <Grid container>
-          <Grid item xs={6} sx={{ backgroundColor: "red" }}>
-            one
+        <Grid container sx={{ border: "2x solid black" }}>
+          <Grid item xs={12} md={6}>
+            <Typography
+              sx={{ fontSize: { xs: 14, sm: 16, md: 20 }, color: "#DC3545" }}
+            >
+              If You want to earn
+            </Typography>
+            <SigninSignup />
           </Grid>
-          <Grid item xs={6} sx={{ backgroundColor: "blue" }}>
-            Two
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ fontSize: { xs: 14, sm: 16, md: 20 }, color: "#0D6EFD" }}
+          >
+            instantly partner account with us.
           </Grid>
         </Grid>
       </ShowcaseOne>

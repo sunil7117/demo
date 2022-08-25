@@ -30,9 +30,9 @@ const SigninSignup = () => {
         variant="outlined"
         color="success"
         onClick={handleClickOpen}
-        sx={{ color: "white" }}
+        sx={{ fontSize: { xs: 10, sm: 12, md: 16 } }}
       >
-        Login
+        Register
       </Button>
       <Dialog
         open={open}

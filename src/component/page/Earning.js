@@ -1,10 +1,11 @@
-import { Typography, Grid, Avatar, Box, Button } from "@mui/material";
+import { Typography, Grid, Avatar, Box } from "@mui/material";
 
 import { FaRegCheckCircle } from "react-icons/fa";
 import dev from "../../images/dev.png";
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import About1 from "../../images/about1.png";
 import payment from "../../images/payment.jpg";
+import SigninSignup from "../loginSinginComponent/SigninSignup";
 const Earning = () => {
   const showcase1 = {
     pic: About1,
@@ -44,14 +45,7 @@ const Earning = () => {
             >
               If You want to earn
             </Typography>
-            <Button
-              color="primary"
-              variant="contained"
-              size="small"
-              sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
-            >
-              Create
-            </Button>
+            <SigninSignup />
           </Grid>
           <Grid
             item

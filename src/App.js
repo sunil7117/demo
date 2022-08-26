@@ -8,6 +8,7 @@ import Project from "./component/page/Project";
 import Account from "./component/page/Account";
 import Support from "./component/page/Support";
 import Team from "./component/page/Team";
+import React from "react";
 
 const App = () => {
   return (

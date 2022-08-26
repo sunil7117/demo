@@ -45,7 +45,7 @@ const Team = () => {
       Name: "Aakash",
       roll: "App Developer",
       pic: aakash,
-      details: `i there , I am Aakash and I better known as lead the team of CodingSick. In this platform We are providing best digital services solution like
+      details: `i there , I am Aakash and I better known as lead the team of CodingSick. In this platform We are providing best digital services solution like'\n'
       1.one is good. 
       Our goal is to push the world to ensure the benefits of technology that you can widely grow your business in Covid-19 . If you are fresher or expert developer then you can join us and learn and earn more .Just come together and push your skill to new revolution world. if you have any business/idea and you want to take your business/idea online then contact us : CodingSick@gmail.com`,
     },
@@ -53,7 +53,7 @@ const Team = () => {
       Name: "Sunil",
       roll: "App Developer",
       pic: aakash,
-      details: "baisc derails dfj",
+      details: "sunil sunil sunil sunil",
     },
   ];
   const [expanded, setExpanded] = React.useState("panel0");
@@ -115,21 +115,19 @@ const Team = () => {
       </Box>
       <Box py={2} sx={{ display: { xs: "block", md: "none" } }}>
         {developerDetailsMobile.map((team, i) => {
-          console.log(i);
           return (
             <Accordion
               key={i}
               TransitionProps={{ unmountOnExit: true }}
-              expanded={expanded === `panel1${i}`}
-              onChange={handleChange(`panel1${i}`)}
+              expanded={expanded === `panel${i}`}
+              onChange={handleChange(`panel${i}`)}
             >
               <AccordionSummary
                 expandIcon={
-                  expanded === `panel1${i}` ? <RemoveIcon /> : <AddIcon />
+                  expanded === `panel${i}` ? <RemoveIcon /> : <AddIcon />
                 }
                 id={`panel${i}a-header`}
                 aria-controls={`panel${i}a-header`}
-                // sx={{ background: "red" }}
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Box

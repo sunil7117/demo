@@ -2,7 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 
 const Login = () => {
   const handleLogin = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const data = new FormData(e.currentTarget);
     const actualData = {
       email: data.get("email"),
@@ -11,6 +11,7 @@ const Login = () => {
     console.log(actualData);
     document.getElementById("login").reset();
   };
+  // const userDetails = [{ email: "sunilapp7117@gmail.com", password: "sunil" }];
   return (
     <div>
       <Box sx={{ height: 450 }}>

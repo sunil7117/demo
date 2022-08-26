@@ -71,7 +71,7 @@ const Earning = () => {
           </Typography>
           <Typography
             textAlign="center"
-            sx={{ fontSize: { xs: 16, md: 18 }, fontWeight: 300 }}
+            sx={{ fontSize: { xs: 15, md: 18 }, fontWeight: 300 }}
           >
             This is our earning Dashboard/protfolio.
           </Typography>

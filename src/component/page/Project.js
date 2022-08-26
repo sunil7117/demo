@@ -69,21 +69,25 @@ const Project = () => {
         </Grid>
       </ShowcaseOne>
       <Box>
-        <Box paddingBottom={2}>
+        {/*Project  Dashboard   */}
+        <Box>
           <Typography
             textAlign="center"
             sx={{
-              lineHeight: { xs: 1 },
-              fontSize: { xs: 42, md: 52 },
+              fontSize: { xs: 32, md: 52 },
               fontWeight: 600,
             }}
           >
-            <span style={{ color: "red" }}>Your </span>Project
+            <span style={{ color: "red" }}>Project </span>Dashboard
           </Typography>
-          <Typography textAlign="center" sx={{ fontSize: 20, fontWeight: 300 }}>
+          <Typography
+            textAlign="center"
+            sx={{ fontSize: { xs: 15, md: 18 }, fontWeight: 300 }}
+          >
             This is our earning Dashboard/protfolio.
           </Typography>
         </Box>
+        {/*Project Dashboard   */}
         <Box
           sx={{
             backgroundColor: "green",

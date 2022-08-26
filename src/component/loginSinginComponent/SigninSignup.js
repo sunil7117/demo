@@ -28,7 +28,7 @@ const SigninSignup = () => {
     <>
       <Button
         variant="outlined"
-        color="success"
+        color="inherit"
         onClick={handleClickOpen}
         sx={{ fontSize: { xs: 10, sm: 12, md: 16 } }}
       >

@@ -19,47 +19,45 @@ const ShowcaseTwo = (props) => {
           container
           alignItems="center"
           sx={{
-            height: { sx: "100%", sm: "100%", md: "100%" },
+            height: "100%",
           }}
         >
           <Grid item xs={5} sx={{}}></Grid>
           <Grid item xs={7} sx={{ py: 2 }}>
             <Box sx={{ pr: { xs: 3, sm: 8 } }}>
-              {/*  Show case two Title settings */}
-              <Typography
-                component="div"
-                variant="h1"
-                textAlign="center"
-                sx={{
-                  fontSize: { xs: 25, sm: 32, md: 52 },
-                  fontWeight: 700,
-                  color: "red",
-                  mb: { xs: 1, md: 10 },
-                }}
-              >
-                {props.value.title}
-              </Typography>
-              {/*  Show case Two Title settings */}
               <Grid container>
-                {/*  Show case one contentBox settings */}
-                <Grid item xs={6} md={12}>
-                  <Box
+                {/*  Show case two Title settings */}
+                <Grid item xs={12} md={12}>
+                  <Typography
+                    component="div"
+                    variant="h1"
+                    textAlign="center"
                     sx={{
-                      width: { xs: 200, sm: 300, md: 600 },
-                      mb: { xs: 1, md: 10 },
+                      fontSize: { xs: 24, sm: 32, md: 52 },
+                      fontWeight: 700,
+                      color: "red",
                     }}
                   >
+                    {props.value.title}
+                  </Typography>
+                </Grid>
+                {/*  Show case Two Title settings */}
+                {/*  Show case one contentBox settings */}
+                <Grid
+                  item
+                  xs={12}
+                  md={12}
+                  sx={{
+                    display: "flex",
+                    py: { xs: 1, sm: 4 },
+                  }}
+                >
+                  <Box>
                     <Typography
                       component="div"
                       variant="p"
                       sx={{
-                        overflow: {
-                          xs: "hidden",
-                          sm: "hidden",
-                          md: "visible",
-                        },
-                        height: { xs: 95, sm: 100 },
-                        fontSize: { xs: 16, sm: 22 },
+                        fontSize: { xs: 14, sm: 16, md: 16 },
                       }}
                     >
                       {props.value.content}
@@ -70,14 +68,14 @@ const ShowcaseTwo = (props) => {
                 {/*  dummy below */}
                 <Grid item xs={6}></Grid>
               </Grid>
-              <Grid container sx={{ mt: { xs: -2 } }} spacing={0.5}>
+              <Grid container sx={{ py: { sm: 3 } }}>
                 {/*  Show case one buttonBox-1 settings */}
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{ mb: 0.5 }}>
                   <Button
                     variant="contained"
                     size="small"
                     color={props.value.btn1.btnColor}
-                    sx={{ fontSize: { xs: 11, sm: 14, md: 16 } }}
+                    sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
                   >
                     {props.value.btn1.btnName}
                   </Button>
@@ -93,7 +91,7 @@ const ShowcaseTwo = (props) => {
                       variant="outlined"
                       size="small"
                       color={props.value.btn2.btnColor}
-                      sx={{ fontSize: { xs: 10, sm: 12 } }}
+                      sx={{ fontSize: { xs: 9, sm: 12, md: 16 } }}
                     >
                       {props.value.btn2.btnName}
                     </Button>

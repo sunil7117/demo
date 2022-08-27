@@ -16,7 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import { NavLink } from "react-router-dom";
 import SigninSignup from "./loginSinginComponent/SigninSignup";
-import logo from "../images/logo.png";
+import logo from "../images/logo.webp";
 import {
   FiSettings,
   FiDollarSign,

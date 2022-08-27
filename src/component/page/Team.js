@@ -14,8 +14,8 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import aakash from "../../images/akash.png";
-import dev from "../../images/desi.png";
+import aakash from "../../images/akash.webp";
+import dev from "../../images/desi.webp";
 
 const Team = () => {
   const developerDetailsDesktop = [

@@ -86,7 +86,14 @@ const Service = () => {
           {servicepacks.map((servicepack, i) => {
             return (
               <>
-                <Grid item xs={12} sm={6} md={4} key={i}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  key={i}
+                  sx={{ background: "red" }}
+                >
                   <ServiceBox data={servicepack} />
                 </Grid>
               </>

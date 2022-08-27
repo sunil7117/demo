@@ -1,17 +1,30 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-
+import axios from "axios";
 const Login = () => {
   const handleLogin = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const data = new FormData(e.currentTarget);
     const actualData = {
       email: data.get("email"),
       Password: data.get("password"),
     };
-    console.log(actualData);
+    // Send a POST request
+    console.log("login process is active");
+    const config = {
+      method: "post",
+      url: "https://calm-thicket-93020.herokuapp.com/users/",
+      data: actualData,
+    };
+    axios(config)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     document.getElementById("login").reset();
   };
-  // const userDetails = [{ email: "sunilapp7117@gmail.com", password: "sunil" }];
+
   return (
     <div>
       <Box sx={{ height: 450 }}>

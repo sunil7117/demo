@@ -6,7 +6,7 @@ const ServiceBox = (props) => {
       <Box
         sx={{
           display: "flex",
-
+          justifyContent: "center",
           flexWrap: "wrap",
           "& > :not(style)": {
             m: 1,
@@ -21,7 +21,7 @@ const ServiceBox = (props) => {
             width="60%"
             sx={{ border: "3px solid #AFB2B4", m: "auto" }}
           ></Box>
-          <Box sx={{ pt: 1 }}>
+          <Box sx={{ background: "red", mt: 1 }}>
             <Typography
               component="img"
               src={props.data.pic}

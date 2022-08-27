@@ -1,13 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
-import service from "../../images/serviceindex.png";
+import service from "../../images/serviceindex.webp";
 import ServiceBox from "./serviceComponent/ServiceBox";
 // images
-import andriod1 from "../../images/and1.png";
-import ux from "../../images/uiux.png";
-import web from "../../images/web.png";
-import wordpress from "../../images/wordpress.png";
-import error from "../../images/error.png";
+import andriod1 from "../../images/and1.webp";
+import ux from "../../images/uiux.webp";
+import web from "../../images/web.webp";
+import wordpress from "../../images/wordpress.webp";
+import error from "../../images/error.webp";
 import convert from "../../images/convert.png";
 const Service = () => {
   const showcase1 = {
@@ -86,14 +86,7 @@ const Service = () => {
           {servicepacks.map((servicepack, i) => {
             return (
               <>
-                <Grid
-                  item
-                  xs={12}
-                  sm={6}
-                  md={4}
-                  key={i}
-                  sx={{ background: "red" }}
-                >
+                <Grid item xs={12} sm={6} md={4} key={i}>
                   <ServiceBox data={servicepack} />
                 </Grid>
               </>

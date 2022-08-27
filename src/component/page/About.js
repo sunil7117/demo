@@ -1,7 +1,7 @@
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import ShowcaseTwo from "./mainComponent/ShowcaseTwo";
-import About1 from "../../images/about1.png";
-import About2 from "../../images/about2.png";
+import About1 from "../../images/about1.webp";
+import About2 from "../../images/about2.webp";
 
 const About = () => {
   const showcase1 = {

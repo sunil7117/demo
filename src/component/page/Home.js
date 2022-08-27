@@ -1,7 +1,7 @@
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
 import ShowcaseTwo from "./mainComponent/ShowcaseTwo";
-import index1 from "../../images/serviceindex.png";
-import img from "../../images/img.png";
+import index1 from "../../images/serviceindex.webp";
+import img from "../../images/img.webp";
 const Home = () => {
   const showcase1 = {
     pic: index1,

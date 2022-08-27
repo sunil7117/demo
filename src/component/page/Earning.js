@@ -1,10 +1,10 @@
 import { Typography, Grid, Avatar, Box } from "@mui/material";
 
 import { FaRegCheckCircle } from "react-icons/fa";
-import dev from "../../images/dev.png";
+import dev from "../../images/dev.webp";
 import ShowcaseOne from "./mainComponent/ShowcaseOne";
-import About1 from "../../images/about1.png";
-import payment from "../../images/payment.jpg";
+import About1 from "../../images/about1.webp";
+import payment from "../../images/payment.webp";
 import SigninSignup from "../loginSinginComponent/SigninSignup";
 const Earning = () => {
   const showcase1 = {

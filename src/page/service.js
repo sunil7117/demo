@@ -1,14 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
-import ShowcaseOne from "./mainComponent/ShowcaseOne";
-import service from "../../images/serviceindex.webp";
-import ServiceBox from "./serviceComponent/ServiceBox";
+import ShowcaseOne from "../components/mainComponent/ShowcaseOne";
+import service from "../images/serviceindex.webp";
+import ServiceBox from "../components/serviceComponent/ServiceBox";
 // images
-import andriod1 from "../../images/and1.webp";
-import ux from "../../images/uiux.webp";
-import web from "../../images/web.webp";
-import wordpress from "../../images/wordpress.webp";
-import error from "../../images/error.webp";
-import convert from "../../images/convert.png";
+import andriod1 from "../images/and1.webp";
+import React from "react";
+import ux from "../images/uiux.webp";
+import web from "../images/web.webp";
+import wordpress from "../images/wordpress.webp";
+import error from "../images/error.webp";
+import convert from "../images/convert.png";
 const Service = () => {
   const showcase1 = {
     pic: service,

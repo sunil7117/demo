@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./component/page/Layout";
-import Home from "./component/page/Home";
-import About from "./component/page/About";
-import Service from "./component/page/service";
-import Earning from "./component/page/Earning";
-import Project from "./component/page/Project";
-import Account from "./component/page/Account";
-import Support from "./component/page/Support";
-import Team from "./component/page/Team";
+import Layout from "./layout/Layout";
+import Home from "./page/Home";
+import About from "./page/About";
+import Service from "./page/service";
+import Earning from "./page/Earning";
+import Project from "./page/Project";
+import Account from "./page/Account";
+import Support from "./page/Support";
+import Team from "./page/Team";
 import React from "react";
 
 const App = () => {

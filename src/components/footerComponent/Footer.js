@@ -13,7 +13,7 @@ import {
 import { FiPhoneCall } from "react-icons/fi";
 import { ImLocation2 } from "react-icons/im";
 import { FiMail } from "react-icons/fi";
-import logo from "../images/logo.webp";
+import logo from "../../images/logo.webp";
 export default function Footer() {
   return (
     <>

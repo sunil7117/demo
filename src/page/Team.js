@@ -2,8 +2,8 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/swiper.min.css";
+import "swiper/modules/navigation/navigation.min.css";
 import {
   Accordion,
   AccordionDetails,
@@ -14,8 +14,8 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import aakash from "../../images/akash.webp";
-import dev from "../../images/desi.webp";
+import aakash from "../images/akash.webp";
+import dev from "../images/desi.webp";
 
 const Team = () => {
   const developerDetailsDesktop = [
@@ -64,7 +64,14 @@ const Team = () => {
   return (
     <>
       <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <Swiper navigation={true} modules={[Navigation, Autoplay]} autoplay>
+        <Swiper
+          navigation={true}
+          modules={[Navigation, Autoplay]}
+          autoplay={{
+            delay: 2500,
+          }}
+          loop={true}
+        >
           {developerDetailsDesktop.map((team, i) => {
             return (
               <SwiperSlide key={i}>

@@ -1,10 +1,11 @@
 import { Grid, Typography, Box, Avatar } from "@mui/material";
-import ShowcaseOne from "./mainComponent/ShowcaseOne";
-import About1 from "../../images/about1.webp";
-import andr from "../../images/and1.webp";
+import ShowcaseOne from "../components/mainComponent/ShowcaseOne";
+import About1 from "../images/about1.webp";
+import andr from "../images/and1.webp";
 import { FaRegCheckCircle } from "react-icons/fa";
-import dev from "../../images/dev.webp";
-import SigninSignup from "../loginSinginComponent/SigninSignup";
+import dev from "../images/dev.webp";
+import React from "react";
+import SigninSignup from "../components/loginSinginComponent/SigninSignup";
 const Project = () => {
   const showcase1 = {
     pic: About1,

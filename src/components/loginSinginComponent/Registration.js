@@ -16,12 +16,16 @@ import {
 
 const Registration = () => {
   const [client, setClient] = React.useState("client");
+
   const userRole = client;
   const handleChangeClient = (event) => {
     setClient(event.target.value);
   };
   const developers = ["Andriod", "Web"];
   console.log(userRole);
+  const checkPassword = () => {
+    console.log("password");
+  };
   const handleRegister = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -33,8 +37,11 @@ const Registration = () => {
       client: data.get("client"),
       developer_role: data.getAll("developer_role"),
     };
-    console.log(actualData);
+    register(actualData);
     document.getElementById("registration").reset();
+  };
+  const register = (post) => {
+    console.log(post);
   };
   return (
     <div>
@@ -63,6 +70,7 @@ const Registration = () => {
             label="Password"
             type="password"
             name="password"
+            id="password"
             variant="outlined"
             fullWidth
             margin="dense"
@@ -70,10 +78,12 @@ const Registration = () => {
           <TextField
             label="Confrim Password"
             type="password"
+            id="confrim_Password"
             name="confrim_password"
             variant="outlined"
             fullWidth
             margin="dense"
+            onBlur={checkPassword}
           />
           <FormControl fullWidth margin="dense">
             <InputLabel id="demo-simple-select-label">Client Type</InputLabel>

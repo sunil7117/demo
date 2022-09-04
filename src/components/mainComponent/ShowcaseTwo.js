@@ -1,9 +1,9 @@
+import React from "react";
 import { Button, Typography, Box, Grid } from "@mui/material";
-// import { BsChevronRight } from "react-icons/bs";
-const ShowcaseOne = (props) => {
-  const btn2 = props.value.btn2;
-  // const btnIcon = props.value.btn1.btnIcon;
 
+const ShowcaseTwo = (props) => {
+  const btn2 = props.value.btn2;
+  // console.log(props.value.pic);
   return (
     <>
       <Box
@@ -12,7 +12,6 @@ const ShowcaseOne = (props) => {
           backgroundImage: `url(${props.value.pic})`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
-          // backgroundPosition: "center center",
           mb: 2,
           height: { xs: 250, sm: 400, md: 550 },
         }}
@@ -24,14 +23,16 @@ const ShowcaseOne = (props) => {
             height: "100%",
           }}
         >
-          <Grid item xs={7} sx={{}}>
-            <Box sx={{ pl: { xs: 3, sm: 10 }, py: 1 }}>
+          <Grid item xs={5} sx={{}}></Grid>
+          <Grid item xs={7} sx={{ py: 2 }}>
+            <Box sx={{ pr: { xs: 3, sm: 8 } }}>
               <Grid container>
-                {/*  Show case one Title settings */}
-                <Grid item xs={12} md={12} sx={{ py: { sm: 3 } }}>
+                {/*  Show case two Title settings */}
+                <Grid item xs={12} md={12}>
                   <Typography
                     component="div"
                     variant="h1"
+                    textAlign="center"
                     sx={{
                       fontSize: { xs: 24, sm: 32, md: 52 },
                       fontWeight: 700,
@@ -40,9 +41,8 @@ const ShowcaseOne = (props) => {
                   >
                     {props.value.title}
                   </Typography>
-                  {props.children}
                 </Grid>
-                {/*  Show case one Title settings */}
+                {/*  Show case Two Title settings */}
                 {/*  Show case one contentBox settings */}
                 <Grid
                   item
@@ -66,6 +66,8 @@ const ShowcaseOne = (props) => {
                   </Box>
                 </Grid>
                 {/*  Show case one contentBox settings */}
+                {/*  dummy below */}
+                <Grid item xs={6}></Grid>
               </Grid>
               <Grid container sx={{ py: { sm: 3 } }}>
                 {/*  Show case one buttonBox-1 settings */}
@@ -79,6 +81,7 @@ const ShowcaseOne = (props) => {
                     {props.value.btn1.btnName}
                   </Button>
                 </Grid>
+
                 {/*  Show case one buttonBox-1 settings */}
                 {/*  Show case one buttonBox-2 settings With conditons */}
                 {btn2 === undefined ? (
@@ -95,15 +98,13 @@ const ShowcaseOne = (props) => {
                     </Button>
                   </Grid>
                 )}
-
                 {/*  Show case one buttonBox-2 settings With conditons */}
               </Grid>
             </Box>
           </Grid>
-          <Grid item xs={5} sx={{}}></Grid>
         </Grid>
       </Box>
     </>
   );
 };
-export default ShowcaseOne;
+export default ShowcaseTwo;

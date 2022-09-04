@@ -12,37 +12,63 @@ import {
   FormGroup,
   FormControlLabel,
   Checkbox,
+  Alert,
 } from "@mui/material";
-
+import axios from "axios";
 const Registration = () => {
   const [client, setClient] = React.useState("client");
-
+  const [checked, setChecked] = React.useState(false);
+  const [error, setError] = React.useState({
+    status: false,
+    message: "",
+    type: "",
+  });
   const userRole = client;
   const handleChangeClient = (event) => {
     setClient(event.target.value);
   };
   const developers = ["Andriod", "Web"];
   console.log(userRole);
-  const checkPassword = () => {
-    console.log("password");
-  };
-  const handleRegister = (e) => {
+
+  const handleRegister = async (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const actualData = {
+    const registerData = {
       name: data.get("name"),
       email: data.get("email"),
-      Password: data.get("password"),
-      confrim_Password: data.get("confrim_password"),
+      password: data.get("password"),
+      confrim_password: data.get("confrim_password"),
       client: data.get("client"),
       developer_role: data.getAll("developer_role"),
     };
-    register(actualData);
-    document.getElementById("registration").reset();
+    if (
+      registerData.name &&
+      registerData.email &&
+      registerData.password &&
+      registerData.confrim_password
+    ) {
+      if (registerData.password !== registerData.confrim_password) {
+        setError({
+          status: "true",
+          message: "password / confrim password not matched",
+          type: "error",
+        });
+      } else {
+        setError({
+          status: "true",
+          message: "success",
+          type: "success",
+        });
+      }
+    } else {
+      setError({
+        status: "true",
+        message: "All fields are required",
+        type: "error",
+      });
+    }
   };
-  const register = (post) => {
-    console.log(post);
-  };
+
   return (
     <div>
       <Box sx={{ height: 450 }}>
@@ -56,6 +82,7 @@ const Registration = () => {
             name="name"
             variant="outlined"
             fullWidth
+            required
             margin="dense"
           />
           <TextField
@@ -64,6 +91,7 @@ const Registration = () => {
             name="email"
             variant="outlined"
             fullWidth
+            required
             margin="dense"
           />
           <TextField
@@ -73,6 +101,7 @@ const Registration = () => {
             id="password"
             variant="outlined"
             fullWidth
+            required
             margin="dense"
           />
           <TextField
@@ -82,8 +111,8 @@ const Registration = () => {
             name="confrim_password"
             variant="outlined"
             fullWidth
+            required
             margin="dense"
-            onBlur={checkPassword}
           />
           <FormControl fullWidth margin="dense">
             <InputLabel id="demo-simple-select-label">Client Type</InputLabel>
@@ -107,6 +136,7 @@ const Registration = () => {
                           name="developer_role"
                           value={developer}
                           size="small"
+                          // checked={checked}
                         />
                       }
                       key={i}
@@ -114,6 +144,11 @@ const Registration = () => {
                     />
                   );
                 })}
+                {error.status ? (
+                  <Alert severity={error.type}>{error.message}</Alert>
+                ) : (
+                  "ok"
+                )}
               </FormGroup>
             ) : (
               ""
@@ -123,6 +158,11 @@ const Registration = () => {
             Register
           </Button>
         </Box>
+        {error.status ? (
+          <Alert severity={error.type}> {error.message}</Alert>
+        ) : (
+          ""
+        )}
       </Box>
     </div>
   );

@@ -15,14 +15,16 @@ import {
   Alert,
 } from "@mui/material";
 import axios from "axios";
+
+import { useNavigate } from "react-router-dom";
 const Registration = () => {
   const [client, setClient] = React.useState("client");
-  const [checked, setChecked] = React.useState(false);
   const [error, setError] = React.useState({
     status: false,
     message: "",
     type: "",
   });
+  const navigation = useNavigate();
   const userRole = client;
   const handleChangeClient = (event) => {
     setClient(event.target.value);
@@ -54,11 +56,23 @@ const Registration = () => {
           type: "error",
         });
       } else {
-        setError({
-          status: "true",
-          message: "success",
-          type: "success",
-        });
+        try {
+          const response = await axios({
+            method: "post",
+            url: "https://reqres.in/api/register",
+            data: registerData,
+          });
+          console.log(response);
+          document.getElementById("registration").reset();
+          navigation("/dashboard");
+        } catch (err) {
+          console.log();
+          setError({
+            status: "true",
+            message: "Request failed with status code 400",
+            type: "error",
+          });
+        }
       }
     } else {
       setError({

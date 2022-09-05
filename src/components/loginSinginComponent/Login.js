@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Alert, Box, Button, TextField, Typography } from "@mui/material";
 
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
+  const navigation = useNavigate();
   const [error, setError] = useState({
     status: false,
     message: "",
@@ -23,13 +26,18 @@ const Login = () => {
           data: loginData,
         });
         console.log(response);
+        document.getElementById("login").reset();
+        navigation("/dashboard");
       } catch (error) {
         console.log(error);
+        setError({
+          status: true,
+          message: "Request failed with status code 400",
+          type: "error",
+        });
       }
-
-      // setError({ status: true, message: "login success", type: "success" });
     } else {
-      console.log("try again!");
+      setError({ status: true, message: "Try again latter!", type: "error" });
     }
   };
   return (

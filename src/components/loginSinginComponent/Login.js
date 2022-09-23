@@ -5,7 +5,7 @@ import { Alert, Box, Button, TextField, Typography } from "@mui/material";
 import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 const Login = () => {
-  const [isLogin, setLogin] = React.useState("false");
+  // const [isLogin, setLogin] = React.useState("false");
   // const navigation = useNavigate();
   const [error, setError] = useState({
     status: false,
@@ -50,7 +50,7 @@ const Login = () => {
       setError({ status: true, message: "Try again latter!", type: "error" });
     }
   };
-  console.log(isLogin);
+  // console.log(isLogin);
   return (
     <Box sx={{ height: 450 }}>
       <Typography sx={{ fontSize: 32, fontWeight: 600 }}>Login</Typography>

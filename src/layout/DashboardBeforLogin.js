@@ -1,15 +1,14 @@
 import React from "react";
+import Navbar from "../components/navbarComponent/Navbar";
 import Footer from "../components/footerComponent/Footer";
 import { Outlet } from "react-router-dom";
-import DashboardNavbar from "../components/navbarComponent/DashboardNavbar";
-const Dashboard = () => {
+const DashboardBeforLogin = () => {
   return (
     <>
-      <DashboardNavbar />
+      <Navbar />
       <Outlet />
       <Footer />
     </>
   );
 };
-
-export default Dashboard;
+export default DashboardBeforLogin;

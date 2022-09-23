@@ -1,14 +1,7 @@
 import React from "react";
-import Navbar from "../components/navbarComponent/Navbar";
-import Footer from "../components/footerComponent/Footer";
-import { Outlet } from "react-router-dom";
+
 const Layout = () => {
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  );
+  return <div>{localStorage.getItem("token") ? "ok" : "bye"}</div>;
 };
+
 export default Layout;

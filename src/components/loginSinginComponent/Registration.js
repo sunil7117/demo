@@ -30,7 +30,6 @@ const Registration = () => {
     setClient(event.target.value);
   };
   const developers = ["Andriod", "Web"];
-  console.log(userRole);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -39,15 +38,18 @@ const Registration = () => {
       name: data.get("name"),
       email: data.get("email"),
       password: data.get("password"),
+      mobile: data.get("mobile"),
       confrim_password: data.get("confrim_password"),
       client: data.get("client"),
       developer_role: data.getAll("developer_role"),
     };
+
     if (
       registerData.name &&
       registerData.email &&
       registerData.password &&
-      registerData.confrim_password
+      registerData.mobile &&
+      registerData.client
     ) {
       if (registerData.password !== registerData.confrim_password) {
         setError({
@@ -56,17 +58,27 @@ const Registration = () => {
           type: "error",
         });
       } else {
+        setError({
+          status: "true",
+          message: "password matched",
+          type: "success",
+        });
         try {
           const response = await axios({
             method: "post",
-            url: "https://reqres.in/api/register",
+            url: "http://localhost:1000/api/register",
             data: registerData,
           });
-          console.log(response);
+
           document.getElementById("registration").reset();
-          navigation("/dashboard");
+          setError({
+            status: "true",
+            message: response.data.msg,
+            type: "success",
+            token: response.data.token,
+          });
+          navigation("/");
         } catch (err) {
-          console.log();
           setError({
             status: "true",
             message: "Request failed with status code 400",
@@ -98,6 +110,7 @@ const Registration = () => {
             fullWidth
             required
             margin="dense"
+            size="small"
           />
           <TextField
             label="Email"
@@ -107,6 +120,7 @@ const Registration = () => {
             fullWidth
             required
             margin="dense"
+            size="small"
           />
           <TextField
             label="Password"
@@ -117,6 +131,7 @@ const Registration = () => {
             fullWidth
             required
             margin="dense"
+            size="small"
           />
           <TextField
             label="Confrim Password"
@@ -127,8 +142,20 @@ const Registration = () => {
             fullWidth
             required
             margin="dense"
+            size="small"
           />
-          <FormControl fullWidth margin="dense">
+          <TextField
+            label="mobile"
+            type="number"
+            id="mobile"
+            name="mobile"
+            variant="outlined"
+            fullWidth
+            required
+            margin="dense"
+            size="small"
+          />
+          <FormControl fullWidth margin="dense" size="small">
             <InputLabel id="demo-simple-select-label">Client Type</InputLabel>
             <Select
               id="client_role"
@@ -158,11 +185,6 @@ const Registration = () => {
                     />
                   );
                 })}
-                {error.status ? (
-                  <Alert severity={error.type}>{error.message}</Alert>
-                ) : (
-                  "ok"
-                )}
               </FormGroup>
             ) : (
               ""
@@ -173,7 +195,7 @@ const Registration = () => {
           </Button>
         </Box>
         {error.status ? (
-          <Alert severity={error.type}> {error.message}</Alert>
+          <Alert severity={error.type}> {(error.message, error.token)}</Alert>
         ) : (
           ""
         )}

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+
 import { Alert, Box, Button, TextField, Typography } from "@mui/material";
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 const Login = () => {
+  const [isLogin, setLogin] = React.useState("false");
   const navigation = useNavigate();
   const [error, setError] = useState({
     status: false,
@@ -22,17 +23,26 @@ const Login = () => {
       try {
         const response = await axios({
           method: "post",
-          url: "https://calm-thicket-93020.herokuapp.com/users/login",
+          url: "http://localhost:1000/api/login",
           data: loginData,
         });
-        console.log(response);
-        document.getElementById("login").reset();
-        navigation("/dashboard");
+        const { msg, type, status, token, user } = response.data;
+        console.log(token);
+        if (status === "failed") {
+          setError({
+            status: true,
+            message: msg,
+            type: "error",
+          });
+        } else {
+          localStorage.setItem("token", token);
+          localStorage.setItem("name", user.name);
+          localStorage.setItem("email", user.email);
+        }
       } catch (error) {
-        console.log(error);
         setError({
           status: true,
-          message: "Request failed with status code 400",
+          message: "unable to login please try again latter...",
           type: "error",
         });
       }
@@ -40,40 +50,37 @@ const Login = () => {
       setError({ status: true, message: "Try again latter!", type: "error" });
     }
   };
+  console.log(isLogin);
   return (
-    <div>
-      <Box sx={{ height: 450 }}>
-        <Typography sx={{ fontSize: 32, fontWeight: 600 }}>Login</Typography>
-        <form id="login" onSubmit={handleLogin}>
-          <TextField
-            label="Email"
-            type="email"
-            name="email"
-            variant="outlined"
-            fullWidth
-            required
-            margin="dense"
-          />
-          <TextField
-            label="Password"
-            type="password"
-            name="password"
-            variant="outlined"
-            fullWidth
-            required
-            margin="dense"
-          />
-          <Button type="submit" variant="contained">
-            Login
-          </Button>
-        </form>
-        {error.status ? (
-          <Alert severity={error.type}>{error.message}</Alert>
-        ) : (
-          ""
-        )}
-      </Box>
-    </div>
+    <Box sx={{ height: 450 }}>
+      <Typography sx={{ fontSize: 32, fontWeight: 600 }}>Login</Typography>
+      <form id="login" onSubmit={handleLogin}>
+        <TextField
+          label="Email"
+          type="email"
+          name="email"
+          variant="outlined"
+          fullWidth
+          required
+          margin="dense"
+          size="small"
+        />
+        <TextField
+          label="Password"
+          type="password"
+          name="password"
+          variant="outlined"
+          fullWidth
+          required
+          margin="dense"
+          size="small"
+        />
+        <Button type="submit" variant="contained">
+          Login
+        </Button>
+      </form>
+      {error.status ? <Alert severity={error.type}>{error.message}</Alert> : ""}
+    </Box>
   );
 };
 export default Login;

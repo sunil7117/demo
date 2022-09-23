@@ -18,11 +18,20 @@ import { NavLink } from "react-router-dom";
 import SigninSignup from "../loginSinginComponent/SigninSignup";
 import logo from "../../images/logo.webp";
 
-import { FiHeadphones, FiHome } from "react-icons/fi";
+import {
+  FiHeadphones,
+  FiHome,
+  FiSettings,
+  FiDollarSign,
+  FiShoppingCart,
+} from "react-icons/fi";
 import { RiTeamFill, RiAccountCircleFill } from "react-icons/ri";
 const pages = [
   { link: "Home", icon: <FiHome /> },
   { link: "About", icon: <RiAccountCircleFill /> },
+  { link: "Service", icon: <FiSettings /> },
+  { link: "Earning", icon: <FiDollarSign /> },
+  { link: "Project", icon: <FiShoppingCart /> },
   { link: "Account", icon: <RiAccountCircleFill /> },
   { link: "Support", icon: <FiHeadphones /> },
   { link: "Team", icon: <RiTeamFill /> },

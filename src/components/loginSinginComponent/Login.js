@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Alert, Box, Button, TextField, Typography } from "@mui/material";
 
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [isLogin, setLogin] = React.useState("false");
-  const navigation = useNavigate();
+  // const navigation = useNavigate();
   const [error, setError] = useState({
     status: false,
     message: "",
@@ -26,7 +26,7 @@ const Login = () => {
           url: "http://localhost:1000/api/login",
           data: loginData,
         });
-        const { msg, type, status, token, user } = response.data;
+        const { msg, status, token, user } = response.data;
         console.log(token);
         if (status === "failed") {
           setError({
